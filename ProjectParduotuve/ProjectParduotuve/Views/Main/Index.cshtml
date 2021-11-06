@@ -1,4 +1,4 @@
-﻿@model ProjectParduotuve.Models.User
+﻿@model System.Web.Mvc.FormCollection
 
 @{
     ViewBag.Title = "Index";
@@ -10,30 +10,14 @@
     <h4>User</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.name)
-        </dt>
+        <dt>Name</dt>
+        <dd>@Html.DisplayFor(Model => Model["name"])</dd>
 
-        <dd>
-            @Html.DisplayFor(model => Model.name)
-        </dd>
+        <dt>Pasword</dt>
+        <dd>@Html.DisplayFor(Model => Model["password"])</dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => Model.password)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.right)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => Model.right.name)
-        </dd>
-
+        <dt>Rights</dt>
+        <dd>@Html.DisplayFor(Model => Model["right"])</dd>
     </dl>
 </div>
 <p>

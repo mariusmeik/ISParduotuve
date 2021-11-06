@@ -11,8 +11,7 @@ namespace ProjectParduotuve.Controllers
     {
         public ActionResult Index()
         {
-            User user = new User();
-            return View(user);
+            return View();
         }
 
         public ActionResult About()

@@ -19,6 +19,6 @@ namespace ProjectParduotuve.Models
         public string password { get; set; }
 
         [DisplayName("Rights")]
-        public RightsType right { get; set; }
+        public string right { get; set; }
     }
 }

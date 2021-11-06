@@ -1,5 +1,4 @@
-﻿@model  ProjectParduotuve.Models.User
-
+﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,13 +17,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Personal Info", "Index", "Main")</li>
+                    <li>@Html.ActionLink("Products Info", "Index", "Products")</li>
+                    <li>@Html.ActionLink("Cards Info   ", "Index", "Cards")</li>
+                    <li>@Html.ActionLink("Workers Info ", "Index", "Workers")</li>
                     <li>Model.name</li>
                     <li>Model.password</li>
                 </ul>
