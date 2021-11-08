@@ -21,6 +21,11 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Products", "Index", "Main",new { fc = Model } ,null)
+    @Html.ActionLink("Workers", "Index", "Main", new { fc = Model }, null)
+    @Html.ActionLink("Workers", "Index", "Main", new { fc = Model }, null)
+    @Html.ActionLink("Workers", "Index", "Main", new { fc = Model }, null)
+
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")*@
 </p>
