@@ -11,10 +11,13 @@ namespace ProjectParduotuve.Controllers
     {
         public ActionResult Index(FormCollection fc)
         {
-            User user = new User();
-            user.name = fc["name"];
-            user.password = fc["password"];
-            fc["rights"] = "Admin";
+            Product product = new Product();
+            product.pagaminimoData = fc["pagaminimoData"];
+            product.pardavimoData = fc["pardavimoData"];
+            product.galiojimoData = fc["galiojimoData"];
+            product.kiekis = fc["kiekis"];
+            product.busena = fc["busena"];
+
             return View(fc);
         }
 

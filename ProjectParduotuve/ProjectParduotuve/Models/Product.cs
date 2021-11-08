@@ -18,6 +18,8 @@ namespace ProjectParduotuve.Models
         public DateTime galiojimoData { get; set; }
         [DisplayName("kiekis")]
         public double kiekis { get; set; }
+        [DisplayName("busena")]
+        public string busena { get; set; }
 
     }
 }
