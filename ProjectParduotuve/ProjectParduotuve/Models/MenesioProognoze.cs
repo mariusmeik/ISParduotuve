@@ -9,6 +9,8 @@ namespace ProjectParduotuve.Models
     public class MenesioProognoze
     {
         public MenesioProognoze() { }
+        [DisplayName("Id")]
+        public int id { get; set; }
 
         [DisplayName("metai")]
         public int metai { get; set; }

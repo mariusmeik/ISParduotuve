@@ -9,6 +9,8 @@ namespace ProjectParduotuve.Models
     public class ProognozuojamaPreke
     {
         public ProognozuojamaPreke() { }
+        [DisplayName("Id")]
+        public int id { get; set; }
 
         [DisplayName("ReikalingasKiekis")]
         public double reikalingasKiekis { get; set; }

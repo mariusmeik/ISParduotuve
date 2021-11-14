@@ -13,21 +13,21 @@ namespace ProjectParduotuve.Models
 
         [DisplayName("Id")]
         public int id { get; set; }
-        [DisplayName("busena")]
-        public string name { get; set; }
-        [DisplayName("busena")]
-        public string surname { get; set; }
-        [DisplayName("busena")]
-        public string email { get; set; }
-        [DisplayName("busena")]
-        public string phone { get; set; }
-        [DisplayName("Work From")]
-        public DateTime workFrom { get; set; }
-        [DisplayName("Work To")]
-        public DateTime workTo { get; set; }
-        [DisplayName("Rights")]
-        public string right { get; set; }
-        [DisplayName("Active")]
-        public bool active { get; set; }
+        [DisplayName("vardas")]
+        public string vardas { get; set; }
+        [DisplayName("pavarde")]
+        public string pavarde { get; set; }
+        [DisplayName("el pastas")]
+        public string elPastas { get; set; }
+        [DisplayName("telefonas")]
+        public string telefonas { get; set; }
+        [DisplayName("dirba nuo:")]
+        public DateTime dirbaNuo { get; set; }
+        [DisplayName("dirba iki:")]
+        public DateTime dirbaIki { get; set; }
+        [DisplayName("pareigos")]
+        public string pareigos { get; set; }
+        [DisplayName("aktyvus")]
+        public bool aktyvus { get; set; }
     }
 }
