@@ -52,7 +52,7 @@ namespace ProjectParduotuve.Controllers
 
         // GET: Product/Edit/5
         //atidarius puslapi
-        public ActionResult Edit(FormCollection fc)
+        public ActionResult Edit(int id)
         {
             Product product = new Product();
             
@@ -107,7 +107,7 @@ namespace ProjectParduotuve.Controllers
 
             List<ProductSpec> list = new List<ProductSpec>();
 
-            list.Add(new ProductSpec());
+            list.Add(new ProductSpec() { id = 1 });
 
             return View(list);
         }
@@ -120,14 +120,10 @@ namespace ProjectParduotuve.Controllers
 
             return View(productSpec);
         }
-
-        // GET: Product/Create
         public ActionResult SpecCreate()
         {
             return View();
         }
-
-        // POST: Product/Create
         [HttpPost]
         public ActionResult SpecCreate(FormCollection collection)
         {
@@ -142,18 +138,12 @@ namespace ProjectParduotuve.Controllers
                 return View();
             }
         }
-
-        // GET: Product/Edit/5
-        //atidarius puslapi
-        public ActionResult SpecEdit(FormCollection fc)
+        public ActionResult SpecEdit(int id)
         {
             ProductSpec productSpec = new ProductSpec();
 
             return View(productSpec);
         }
-
-        // POST: Product/Edit/5
-        //uzdarus puslapi
         [HttpPost]
         public ActionResult SpecEdit(FormCollection collection, int id)
         {
@@ -168,8 +158,6 @@ namespace ProjectParduotuve.Controllers
                 return View();
             }
         }
-
-        // GET: Product/Delete/5
         public ActionResult SpecDelete(int id)
         {
             ProductSpec productSpec = new ProductSpec();
@@ -191,6 +179,12 @@ namespace ProjectParduotuve.Controllers
             {
                 return View();
             }
+        }
+
+        //----------------------------------------------------------------------------
+
+        public ActionResult Prediction() {
+            return View();
         }
     }
 }

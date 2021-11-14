@@ -7,15 +7,15 @@
 <h2>index1</h2>
 
 <p>
+    @using (Html.BeginForm("Index", "Main", FormMethod.Post))
+    {
+        <input type="submit" value="Atgal i pagrindini">
+    }
+    @Html.ActionLink("Specifications", "SpecIndex")
+    @Html.ActionLink("Prognoze", "Prediction")
     @Html.ActionLink("Create New", "Create")
 
 </p>
-<div>
-    aa
-    @Session["user"]
-    aa
-    @Session["password"]
-</div>
 <table class="table">
     <tr>
         <th>

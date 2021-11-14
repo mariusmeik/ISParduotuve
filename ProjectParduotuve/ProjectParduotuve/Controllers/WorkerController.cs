@@ -14,7 +14,7 @@ namespace ProjectParduotuve.Controllers
         {
             List<Worker> list = new List<Worker>();
 
-            list.Add(new Worker());
+            list.Add(new Worker() { id = 1 } );
             
             return View(list);
         }
@@ -22,7 +22,9 @@ namespace ProjectParduotuve.Controllers
         // GET: Worker/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Worker worker = new Worker();
+
+            return View(worker);
         }
 
         // GET: Worker/Create
@@ -74,7 +76,9 @@ namespace ProjectParduotuve.Controllers
         // GET: Worker/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Worker worker = new Worker();
+
+            return View(worker);
         }
 
         // POST: Worker/Delete/5

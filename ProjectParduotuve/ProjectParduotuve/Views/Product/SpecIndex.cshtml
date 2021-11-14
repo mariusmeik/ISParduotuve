@@ -8,7 +8,7 @@
 
 <p>
     @Html.ActionLink("Back to List", "Index")
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "SpecCreate")
 </p>
 <table class="table">
     <tr>
@@ -48,9 +48,9 @@
             @Html.DisplayFor(modelItem => item.count)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "SpecEdit", new {id=item.id}) |
+            @Html.ActionLink("Details", "SpecDetails", new {id=item.id }) |
+            @Html.ActionLink("Delete", "SpecDelete", new { id=item.id})
         </td>
     </tr>
 }

@@ -33,6 +33,11 @@
     {
         <input type="submit" value="Cards">
     }
+    @if (Session["rights"] == "stuff") {
+        <div>
+            aaiodfnv
+        </div>
+    }
     @using (Html.BeginForm("Index", "Cashier", FormMethod.Post))
     {
         <input type="submit" value="Cashier">

@@ -7,6 +7,10 @@
 <h2>Index</h2>
 
 <p>
+    @using (Html.BeginForm("Index", "Main", FormMethod.Post))
+    {
+        <input type="submit" value="Atgal i pagrindini">
+    }
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">

@@ -9,8 +9,10 @@ namespace ProjectParduotuve.Models
 {
     public class ProductSpec
     {
-        [DisplayName("Name")]
-        public int name { get; set; }
+        [DisplayName("Id")]
+        public int id { get; set; }
+        [DisplayName("Vardas")]
+        public string name { get; set; }
         [DisplayName("Weight")]
         public double weight { get; set; }
         [DisplayName("Price")]
