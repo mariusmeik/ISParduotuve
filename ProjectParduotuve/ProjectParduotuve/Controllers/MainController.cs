@@ -18,9 +18,11 @@ namespace ProjectParduotuve.Controllers
             //    ViewBag.password = fc["password"];
             //ViewBag.right = "Admin";
             if (fc.AllKeys.Contains("username"))
-                ViewData["user"] = fc["username"];
+                Session["user"] = fc["username"];
             if (fc.AllKeys.Contains("password"))
-                ViewData["password"] = fc["username"];
+                Session["password"] = fc["password"];
+
+            Session["rights"] = "Admin";
             return View();
 
         }

@@ -178,20 +178,22 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Worker\Index.cshtml" />
-    <Content Include="Views\Card\Index.cshtml" />
-    <Content Include="Views\Card\Edit.cshtml" />
-    <Content Include="Views\Worker\Edit.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\index.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Card\Details.cshtml" />
     <Content Include="Views\Card\Delete.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
+    <Content Include="Views\Worker\Details.cshtml" />
+    <Content Include="Views\Worker\Index.cshtml" />
+    <Content Include="Views\Worker\Edit.cshtml" />
+    <Content Include="Views\Card\Edit.cshtml" />
+    <Content Include="Views\Card\Index.cshtml" />
+    <Content Include="Views\Worker\Delete.cshtml" />
+    <Content Include="Views\Cashier\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Cashier\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

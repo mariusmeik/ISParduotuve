@@ -22,7 +22,10 @@ namespace ProjectParduotuve.Controllers
         // GET: Product/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+
+            Product product = new Product();
+
+            return View(product);
         }
 
         // GET: Product/Create
@@ -52,8 +55,7 @@ namespace ProjectParduotuve.Controllers
         public ActionResult Edit(FormCollection fc)
         {
             Product product = new Product();
-            product.kiekis = 100;
-
+            
             return View(product);
         }
 
@@ -77,7 +79,9 @@ namespace ProjectParduotuve.Controllers
         // GET: Product/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Product product = new Product();
+
+            return View(product);
         }
 
         // POST: Product/Delete/5

@@ -10,19 +10,13 @@ namespace ProjectParduotuve.Controllers
     public class WorkerController : Controller
     {
         // GET: Worker
-        public ActionResult Index(FormCollection fc)
+        public ActionResult Index()
         {
-            Dictionary<string, object> dir = new Dictionary<string, object>();
-            dir["username"] = fc["username"];
-            dir["password"] = fc["password"];
-            dir["rights"] = "Admin";
             List<Worker> list = new List<Worker>();
 
             list.Add(new Worker());
-
-            dir["list"] = list;
-
-            return View(dir);
+            
+            return View(list);
         }
 
         // GET: Worker/Details/5
@@ -56,7 +50,9 @@ namespace ProjectParduotuve.Controllers
         // GET: Worker/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Worker worker = new Worker();
+
+            return View(worker);
         }
 
         // POST: Worker/Edit/5

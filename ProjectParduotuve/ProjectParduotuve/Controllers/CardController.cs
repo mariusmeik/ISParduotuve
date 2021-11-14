@@ -12,23 +12,19 @@ namespace ProjectParduotuve.Controllers
         // GET: Card
         public ActionResult Index(FormCollection fc)
         {
-            Dictionary<string, object> dir = new Dictionary<string, object>();
-            dir["username"] = fc["username"];
-            dir["password"] = fc["password"];
-            dir["rights"] = "Admin";
             List<Card> list = new List<Card>();
 
             list.Add(new Card());
 
-            dir["list"] = list;
-
-            return View(dir);
+            return View(list);
         }
 
         // GET: Card/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Card card = new Card();
+
+            return View(card);
         }
 
         // GET: Card/Create
@@ -56,7 +52,9 @@ namespace ProjectParduotuve.Controllers
         // GET: Card/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Card card = new Card();
+            
+            return View(card);
         }
 
         // POST: Card/Edit/5
@@ -78,7 +76,9 @@ namespace ProjectParduotuve.Controllers
         // GET: Card/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Card card = new Card();
+
+            return View(card);
         }
 
         // POST: Card/Delete/5
