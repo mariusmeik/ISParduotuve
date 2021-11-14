@@ -11,45 +11,30 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>Username</dt>
-        <dd>@Html.DisplayFor(Model => Model["username"])</dd>
+        <dd>@ViewBag.username</dd>
 
         <dt>Pasword</dt>
-        <dd>@Html.DisplayFor(Model => Model["password"])</dd>
+        <dd>@ViewBag.password</dd>
 
         <dt>Rights</dt>
-        <dd>@Html.DisplayFor(Model => Model["rights"])</dd>
+        <dd>@ViewBag.rights</dd>
     </dl>
 </div>
 <div>
     @using (Html.BeginForm("Index", "Product", FormMethod.Post))
     {
-        <input type=hidden name=username value=Model["username"]>
-        <input type=hidden name=password value=Model["password"]>
         <input type="submit" value="Products">
     }
     @using (Html.BeginForm("Index", "Worker", FormMethod.Post))
     {
-        <input type=hidden name=username value=Model["username"]>
-        <input type=hidden name=password value=Model["password"]>
         <input type="submit" value="Workers">
     }
     @using (Html.BeginForm("Index", "Card", FormMethod.Post))
     {
-        <input type=hidden name=username value=Model["username"]>
-        <input type=hidden name=password value=Model["password"]>
         <input type="submit" value="Cards">
     }
     @using (Html.BeginForm("Index", "Cashier", FormMethod.Post))
     {
-        <input type=hidden name=username value=Model["username"]>
-        <input type=hidden name=password value=Model["password"]>
         <input type="submit" value="Cashier">
     }
-
-    @*@Html.ActionLink("Workers", "Index", "Main", new { dir = Model }, null)
-    @Html.ActionLink("Workers", "Index", "Main", new { dir = Model }, null)
-    @Html.ActionLink("Workers", "Index", "Main", new { dir = Model }, null)*@
-
-    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-        @Html.ActionLink("Back to List", "Index")*@
 </div>

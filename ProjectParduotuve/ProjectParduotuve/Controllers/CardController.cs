@@ -3,15 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ProjectParduotuve.Models;
 
 namespace ProjectParduotuve.Controllers
 {
     public class CardController : Controller
     {
         // GET: Card
-        public ActionResult Index()
+        public ActionResult Index(FormCollection fc)
         {
-            return View();
+            Dictionary<string, object> dir = new Dictionary<string, object>();
+            dir["username"] = fc["username"];
+            dir["password"] = fc["password"];
+            dir["rights"] = "Admin";
+            List<Card> list = new List<Card>();
+
+            list.Add(new Card());
+
+            dir["list"] = list;
+
+            return View(dir);
         }
 
         // GET: Card/Details/5

@@ -9,12 +9,11 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+    
 </p>
+<p>@ViewBag.username</p>
 <table class="table">
     <tr>
-        <th>
-            Id
-        </th>
         <th>
             Pagaminimo Data
         </th>
@@ -30,12 +29,15 @@
         <th>
             Busena
         </th>
+        <th>
+            @Html.DisplayFor(Model => Model["username"])
+        </th>
+        <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (var item in Model["list"] as List<ProjectParduotuve.Models.Product>)
     {
         <tr>
-
             <td>
                 @Html.DisplayFor(modelItem => item.pagaminimoData)
             </td>
@@ -52,9 +54,20 @@
                 @Html.DisplayFor(modelItem => item.busena)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @using (Html.BeginForm("Edit", "Product", FormMethod.Get))
+                {
+                    <input type=hidden name=username value=Model["username"]>
+                    <input type=hidden name=password value=Model["password"]>
+                    <input type=hidden name=ID value=item.id>
+                    <input type="submit" value="Edit" id=item.id>
+                }
+                @using (Html.BeginForm("Delete", "Product", FormMethod.Get))
+                {
+                    <input type=hidden name=username value=Model["username"]>
+                    <input type=hidden name=password value=Model["password"]>
+                    <input type=hidden name=ID value=item.id>
+                    <input type="submit" value="Delete" id=item.id>
+                }
             </td>
         </tr>
     }

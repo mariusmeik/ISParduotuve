@@ -9,10 +9,13 @@ namespace ProjectParduotuve.Controllers
 {
     public class HomeController : Controller
     {
+        // GET: Product/Edit/5
+        //atidarius puslapi
         public ActionResult Index()
         {
             return View();
         }
+
 
         public ActionResult About()
         {

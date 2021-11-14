@@ -1,5 +1,4 @@
-﻿@model Dictionary<string, object>
-@{
+﻿@{
     ViewBag.Title = "Login";
 }
 
@@ -7,12 +6,6 @@
 <div class="jumbotron">
     @using (Html.BeginForm("Index", "Main", FormMethod.Post))
     {
-
-        @*@Html.TextBoxFor(Model => Model["name"])
-
-        @Html.TextBoxFor(Model => Model["password"])
-        <input type="submit" value=inputer>
-        <p>@Html.ActionLink("Login", "Index", "Main", new { name = Model["name"], pasword = Model["password"] }, new { @class = "btn btn-success" })</p>*@
         <h2>Name</h2>
         <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
         <h2>Password</h2>

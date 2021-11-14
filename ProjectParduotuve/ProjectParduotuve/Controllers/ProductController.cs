@@ -12,16 +12,16 @@ namespace ProjectParduotuve.Controllers
         public ActionResult Index(FormCollection fc)
         {
             Dictionary<string, object> dir = new Dictionary<string, object>();
-            /*
-            Product product = new Product();
-            product.pagaminimoData = DateTime.Parse(fc["pagaminimoData"]);
-            product.pardavimoData = DateTime.Parse(fc["pardavimoData"]);
-            product.galiojimoData = DateTime.Parse(fc["galiojimoData"]);
-            product.kiekis = double.Parse(fc["kiekis"]);
-            product.busena = fc["busena"];
-            */
+            dir["username"] = fc["username"];
+            dir["password"] = fc["password"];
+            dir["rights"] = "Admin";
+            List<Product> list = new List<Product>();
 
-            return View();
+            list.Add(new Product());
+
+            dir["list"] = list;
+
+            return View(dir);
         }
 
         // GET: Product/Details/5
@@ -53,14 +53,19 @@ namespace ProjectParduotuve.Controllers
         }
 
         // GET: Product/Edit/5
-        public ActionResult Edit(int id)
+        //atidarius puslapi
+        public ActionResult Edit(FormCollection fc)
         {
-            return View();
+            Product product = new Product();
+            product.kiekis = 100;
+
+            return View(product);
         }
 
         // POST: Product/Edit/5
+        //uzdarus puslapi
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(FormCollection collection, int id)
         {
             try
             {
