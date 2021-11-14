@@ -99,5 +99,98 @@ namespace ProjectParduotuve.Controllers
                 return View();
             }
         }
+        
+        //------------------------------------------------------------------------------------------------------------------------
+
+        public ActionResult SpecIndex()
+        {
+
+            List<ProductSpec> list = new List<ProductSpec>();
+
+            list.Add(new ProductSpec());
+
+            return View(list);
+        }
+
+        // GET: Product/Details/5
+        public ActionResult SpecDetails(int id)
+        {
+
+            ProductSpec productSpec = new ProductSpec();
+
+            return View(productSpec);
+        }
+
+        // GET: Product/Create
+        public ActionResult SpecCreate()
+        {
+            return View();
+        }
+
+        // POST: Product/Create
+        [HttpPost]
+        public ActionResult SpecCreate(FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add insert logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Product/Edit/5
+        //atidarius puslapi
+        public ActionResult SpecEdit(FormCollection fc)
+        {
+            ProductSpec productSpec = new ProductSpec();
+
+            return View(productSpec);
+        }
+
+        // POST: Product/Edit/5
+        //uzdarus puslapi
+        [HttpPost]
+        public ActionResult SpecEdit(FormCollection collection, int id)
+        {
+            try
+            {
+                // TODO: Add update logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Product/Delete/5
+        public ActionResult SpecDelete(int id)
+        {
+            ProductSpec productSpec = new ProductSpec();
+
+            return View(productSpec);
+        }
+
+        // POST: Product/Delete/5
+        [HttpPost]
+        public ActionResult SpecDelete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

@@ -132,6 +132,7 @@
     <Compile Include="Models\BusenaEnum.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductSpec.cs" />
     <Compile Include="Models\RightsType.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Worker.cs" />
@@ -191,6 +192,14 @@
     <Content Include="Views\Card\Index.cshtml" />
     <Content Include="Views\Worker\Delete.cshtml" />
     <Content Include="Views\Cashier\Index.cshtml" />
+    <Content Include="Views\Product\SpecIndex.cshtml" />
+    <Content Include="Views\Product\SpecCreate.cshtml" />
+    <Content Include="Views\Product\SpecDetails.cshtml" />
+    <Content Include="Views\Product\SpecDelete.cshtml" />
+    <Content Include="Views\Product\SpecEdit.cshtml" />
+    <Content Include="Views\Product\Create.cshtml" />
+    <Content Include="Views\Worker\Create.cshtml" />
+    <Content Include="Views\Card\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
