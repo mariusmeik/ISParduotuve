@@ -1,0 +1,62 @@
+﻿@*@model IEnumerable<ProjectParduotuve.Models.Product>*@
+@model Dictionary<string, object>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Pagaminimo Data
+        </th>
+        <th>
+            Pardavimo Data
+        </th>
+        <th>
+            Galiojimo Data
+        </th>
+        <th>
+            Kiekis
+        </th>
+        <th>
+            Busena
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.pagaminimoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pardavimoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.galiojimoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kiekis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.busena)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+
+</table>

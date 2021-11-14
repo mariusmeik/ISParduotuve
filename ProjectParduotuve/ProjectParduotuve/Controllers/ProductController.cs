@@ -11,14 +11,17 @@ namespace ProjectParduotuve.Controllers
     {
         public ActionResult Index(FormCollection fc)
         {
+            Dictionary<string, object> dir = new Dictionary<string, object>();
+            /*
             Product product = new Product();
-            product.pagaminimoData = fc["pagaminimoData"];
-            product.pardavimoData = fc["pardavimoData"];
-            product.galiojimoData = fc["galiojimoData"];
-            product.kiekis = fc["kiekis"];
+            product.pagaminimoData = DateTime.Parse(fc["pagaminimoData"]);
+            product.pardavimoData = DateTime.Parse(fc["pardavimoData"]);
+            product.galiojimoData = DateTime.Parse(fc["galiojimoData"]);
+            product.kiekis = double.Parse(fc["kiekis"]);
             product.busena = fc["busena"];
+            */
 
-            return View(fc);
+            return View();
         }
 
         // GET: Product/Details/5
