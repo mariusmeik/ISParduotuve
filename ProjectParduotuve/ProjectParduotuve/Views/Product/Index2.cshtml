@@ -1,0 +1,75 @@
+﻿@*@model IEnumerable<ProjectParduotuve.Models.Product>*@
+@model Dictionary<string, object>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    
+</p>
+<p>@ViewBag.username</p>
+<table class="table">
+    <tr>
+        <th>
+            Pagaminimo Data
+        </th>
+        <th>
+            Pardavimo Data
+        </th>
+        <th>
+            Galiojimo Data
+        </th>
+        <th>
+            Kiekis
+        </th>
+        <th>
+            Busena
+        </th>
+        <th>
+            @Html.DisplayFor(Model => Model["username"])
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model["list"] as List<ProjectParduotuve.Models.Product>)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.pagaminimoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pardavimoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.galiojimoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.kiekis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.busena)
+            </td>
+            <td>
+                @using (Html.BeginForm("Edit", "Product", FormMethod.Get))
+                {
+                    <input type=hidden name=username value=Model["username"]>
+                    <input type=hidden name=password value=Model["password"]>
+                    <input type=hidden name=ID value=item.id>
+                    <input type="submit" value="Edit" id=item.id>
+                }
+                @using (Html.BeginForm("Delete", "Product", FormMethod.Get))
+                {
+                    <input type=hidden name=username value=Model["username"]>
+                    <input type=hidden name=password value=Model["password"]>
+                    <input type=hidden name=ID value=item.id>
+                    <input type="submit" value="Delete" id=item.id>
+                }
+            </td>
+        </tr>
+    }
+
+</table>

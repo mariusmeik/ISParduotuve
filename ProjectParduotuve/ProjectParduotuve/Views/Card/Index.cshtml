@@ -1,0 +1,82 @@
+﻿@*@model IEnumerable<ProjectParduotuve.Models.Card>*@
+@model Dictionary<string, object>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Validity From
+        </th>
+        <th>
+            Validity To
+        </th>
+        <th>
+            Active
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model["list"] as List<ProjectParduotuve.Models.Card>)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.surname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.validityFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.validityTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.active)
+            </td>
+            <td>
+                @using (Html.BeginForm("Edit", "Card", FormMethod.Post))
+                {
+                    <input type=hidden name=username value=Model["username"]>
+                    <input type=hidden name=password value=Model["password"]>
+                    <input type=hidden name=ID value=Model["ID"]>
+                    <input type="submit" value="Edit">
+                }
+                @using (Html.BeginForm("Delete", "Card", FormMethod.Post))
+                {
+                    <input type=hidden name=username value=Model["username"]>
+                    <input type=hidden name=password value=Model["password"]>
+                    <input type=hidden name=ID value=Model["ID"]>
+                    <input type="submit" value="Delete">
+                }
+            </td>
+        </tr>
+    }
+
+</table>

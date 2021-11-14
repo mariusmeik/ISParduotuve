@@ -7,33 +7,27 @@ using ProjectParduotuve.Models;
 
 namespace ProjectParduotuve.Controllers
 {
-    public class MainController : Controller
+    public class CashierController : Controller
     {
-        
-        public ActionResult Index(FormCollection fc)
-        {
-            if(fc.AllKeys.Contains("username"))
-                ViewBag.username = fc["username"];
-            if (fc.AllKeys.Contains("password"))
-                ViewBag.password = fc["password"];
-            ViewBag.right = "Admin";
-            return View();
-
-        }
-
-
-
-        // GET: Main/Details/5
-        public ActionResult Details()
+        // GET: Cashier
+        public ActionResult Index()
         {
             return View();
         }
-        // GET: Main/Create
+
+        // GET: Cashier/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: Cashier/Create
         public ActionResult Create()
         {
             return View();
         }
-        // POST: Main/Create
+
+        // POST: Cashier/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -48,12 +42,14 @@ namespace ProjectParduotuve.Controllers
                 return View();
             }
         }
-        // GET: Main/Edit/5
+
+        // GET: Cashier/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
-        // POST: Main/Edit/5
+
+        // POST: Cashier/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -68,12 +64,14 @@ namespace ProjectParduotuve.Controllers
                 return View();
             }
         }
-        // GET: Main/Delete/5
+
+        // GET: Cashier/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
-        // POST: Main/Delete/5
+
+        // POST: Cashier/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

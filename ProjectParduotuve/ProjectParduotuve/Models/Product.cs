@@ -10,6 +10,9 @@ namespace ProjectParduotuve.Models
     public class Product
     {
         public Product() { }
+
+        [DisplayName("Id")]
+        public int id { get; set; }
         [DisplayName("pagaminimoData")]
         public DateTime pagaminimoData { get; set; }
         [DisplayName("pardavimoData")]
