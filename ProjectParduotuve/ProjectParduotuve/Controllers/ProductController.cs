@@ -9,19 +9,14 @@ namespace ProjectParduotuve.Controllers
 {
     public class ProductController : Controller
     {
-        public ActionResult Index(FormCollection fc)
+        public ActionResult Index()
         {
-            Dictionary<string, object> dir = new Dictionary<string, object>();
-            dir["username"] = fc["username"];
-            dir["password"] = fc["password"];
-            dir["rights"] = "Admin";
+
             List<Product> list = new List<Product>();
 
             list.Add(new Product());
 
-            dir["list"] = list;
-
-            return View(dir);
+            return View(list);
         }
 
         // GET: Product/Details/5

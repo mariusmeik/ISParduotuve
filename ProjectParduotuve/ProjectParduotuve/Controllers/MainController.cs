@@ -12,11 +12,15 @@ namespace ProjectParduotuve.Controllers
         
         public ActionResult Index(FormCollection fc)
         {
-            if(fc.AllKeys.Contains("username"))
-                ViewBag.username = fc["username"];
+            //if(fc.AllKeys.Contains("username"))
+            //    ViewBag.username = fc["username"];
+            //if (fc.AllKeys.Contains("password"))
+            //    ViewBag.password = fc["password"];
+            //ViewBag.right = "Admin";
+            if (fc.AllKeys.Contains("username"))
+                ViewData["user"] = fc["username"];
             if (fc.AllKeys.Contains("password"))
-                ViewBag.password = fc["password"];
-            ViewBag.right = "Admin";
+                ViewData["password"] = fc["username"];
             return View();
 
         }
