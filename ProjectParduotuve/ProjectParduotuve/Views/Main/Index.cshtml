@@ -21,6 +21,10 @@
     </dl>
 </div>
 <div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <input type="submit" value="Back to login">
+    }
     @using (Html.BeginForm("Index", "Product", FormMethod.Post))
     {
         <input type="submit" value="Products">
@@ -33,7 +37,8 @@
     {
         <input type="submit" value="Cards">
     }
-    @if (Session["rights"] == "stuff") {
+    @if (Session["rights"] == "stuff")
+    {
         <div>
             aaiodfnv
         </div>

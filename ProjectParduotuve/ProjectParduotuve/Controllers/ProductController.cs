@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjectParduotuve.Models;
+using ProjectParduotuve.Repos;
 
 namespace ProjectParduotuve.Controllers
 {
@@ -106,8 +107,7 @@ namespace ProjectParduotuve.Controllers
         {
 
             List<ProductSpec> list = new List<ProductSpec>();
-
-            list.Add(new ProductSpec() { id = 1 });
+            list = ProductSpecReposatory.GetAllItems();
 
             return View(list);
         }
