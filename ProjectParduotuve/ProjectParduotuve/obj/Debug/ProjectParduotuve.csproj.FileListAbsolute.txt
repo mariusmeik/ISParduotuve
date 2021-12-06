@@ -547,4 +547,3 @@ C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotu
 C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.SqlServer.dll
 C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.xml
 C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.SqlServer.xml
-C:\Users\Vartotojas\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\obj\Debug\ProjectParduotuve.csproj.CopyComplete
