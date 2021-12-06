@@ -12,12 +12,12 @@ namespace ProjectParduotuve
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            /*
+            
             routes.MapRoute(
                 name: "Main",
                 url: "Main/{action}",
                 defaults: new { controller = "Main", action = "Index" }
-            );*/
+            );
 
             routes.MapRoute(
                 name: "Default",
