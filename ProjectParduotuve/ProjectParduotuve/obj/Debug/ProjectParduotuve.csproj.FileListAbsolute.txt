@@ -543,3 +543,7 @@ C:\Users\Vartotojas\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectPardu
 C:\Users\Vartotojas\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Vartotojas\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\Vartotojas\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.dll
+C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.SqlServer.dll
+C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.xml
+C:\Users\Paulius\Documents\GitHub\ISParduotuve\ProjectParduotuve\ProjectParduotuve\bin\EntityFramework.SqlServer.xml
