@@ -17,7 +17,7 @@ namespace ProjectParduotuve.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Produkto_specifikacija()
         {
-            this.Produktas = new HashSet<Produkta>();
+            this.Produktas = new HashSet<Produktas>();
             this.Prognazuojama_preke = new HashSet<Prognazuojama_preke>();
         }
     
@@ -29,7 +29,7 @@ namespace ProjectParduotuve.Models
         public double Kiekis { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Produkta> Produktas { get; set; }
+        public virtual ICollection<Produktas> Produktas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Prognazuojama_preke> Prognazuojama_preke { get; set; }
     }

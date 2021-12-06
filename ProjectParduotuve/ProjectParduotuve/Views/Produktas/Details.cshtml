@@ -1,0 +1,82 @@
+﻿@model ProjectParduotuve.Models.Produktas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produktas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pagaminimo_data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pagaminimo_data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pardavimo_data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pardavimo_data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Galiojimo_data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Galiojimo_data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kiekis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Busena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Busena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vieta.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vieta.Pavadinimas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uzsakomos_prekes.id_Uzsakomos_prekes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uzsakomos_prekes.id_Uzsakomos_prekes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produkto_specifikacija.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produkto_specifikacija.Pavadinimas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Produktas }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

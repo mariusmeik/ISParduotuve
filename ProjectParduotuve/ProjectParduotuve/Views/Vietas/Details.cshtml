@@ -1,0 +1,42 @@
+﻿@model ProjectParduotuve.Models.Vieta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vieta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pavadinimas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paskirtis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paskirtis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Vieta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

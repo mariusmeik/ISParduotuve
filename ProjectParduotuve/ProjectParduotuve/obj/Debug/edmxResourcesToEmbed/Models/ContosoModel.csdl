@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ITModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Darbuotojas">
+    <Key>
+      <PropertyRef Name="id_Darbuotojas" />
+    </Key>
+    <Property Name="id_Darbuotojas" Type="Int32" Nullable="false" />
+    <Property Name="Vardas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pavarde" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="El_pastas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Telefonas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Dirba_nuo" Type="DateTime" Precision="0" />
+    <Property Name="Dirba_iki" Type="DateTime" Precision="0" />
+    <Property Name="Aktyvus" Type="Boolean" Nullable="false" />
+    <Property Name="Pareigos" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fk_id_Prisijungimas" Type="Int32" Nullable="false" />
+    <Property Name="fk_id_Vieta" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Prisijungimas" Relationship="Self.FK__Darbuotoj__fk_id__3C69FB99" FromRole="Darbuotojas" ToRole="Prisijungimas" />
+    <NavigationProperty Name="Vieta" Relationship="Self.FK__Darbuotoj__fk_id__3D5E1FD2" FromRole="Darbuotojas" ToRole="Vieta" />
+    <NavigationProperty Name="Darbuotojo_menesio_ataskaita" Relationship="Self.FK__Darbuotoj__fk_id__440B1D61" FromRole="Darbuotojas" ToRole="Darbuotojo_menesio_ataskaita" />
+    <NavigationProperty Name="Uzsakymas" Relationship="Self.FK__Uzsakymas__fk_id__47DBAE45" FromRole="Darbuotojas" ToRole="Uzsakymas" />
+  </EntityType>
+  <EntityType Name="Darbuotojo_menesio_ataskaita">
+    <Key>
+      <PropertyRef Name="id_Darbuotojo_menesio_ataskaita" />
+    </Key>
+    <Property Name="id_Darbuotojo_menesio_ataskaita" Type="Int32" Nullable="false" />
+    <Property Name="Metai" Type="Int32" Nullable="false" />
+    <Property Name="Menuo" Type="Int32" Nullable="false" />
+    <Property Name="Dirba_nuo_h" Type="Double" />
+    <Property Name="Dirba_iki_h" Type="Double" />
+    <Property Name="Darbo_dienos" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Atlyginimas" Type="Double" Nullable="false" />
+    <Property Name="Pelnas" Type="Double" Nullable="false" />
+    <Property Name="Pareigos" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fk_id_Vieta" Type="Int32" />
+    <Property Name="fk_id_Darbuotojas" Type="Int32" />
+    <NavigationProperty Name="Darbuotojas" Relationship="Self.FK__Darbuotoj__fk_id__440B1D61" FromRole="Darbuotojo_menesio_ataskaita" ToRole="Darbuotojas" />
+    <NavigationProperty Name="Vieta" Relationship="Self.FK__Darbuotoj__fk_id__4316F928" FromRole="Darbuotojo_menesio_ataskaita" ToRole="Vieta" />
+  </EntityType>
+  <EntityType Name="Kortele">
+    <Key>
+      <PropertyRef Name="id_Kortele" />
+    </Key>
+    <Property Name="id_Kortele" Type="Int32" Nullable="false" />
+    <Property Name="Vardas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pavarde" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="El_pastas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Telefonas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Galioja_iki" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Galioja_nuo" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Aktyvus" Type="Boolean" Nullable="false" />
+    <Property Name="fk_id_Prisijungimas" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Prisijungimas" Relationship="Self.FK__Kortele__fk_id_P__403A8C7D" FromRole="Kortele" ToRole="Prisijungimas" />
+    <NavigationProperty Name="Uzsakymas" Relationship="Self.FK__Uzsakymas__fk_id__48CFD27E" FromRole="Kortele" ToRole="Uzsakymas" />
+  </EntityType>
+  <EntityType Name="Menesio_prognoze">
+    <Key>
+      <PropertyRef Name="id_Menesio_prognoze" />
+    </Key>
+    <Property Name="id_Menesio_prognoze" Type="Int32" Nullable="false" />
+    <Property Name="Metai" Type="Int32" Nullable="false" />
+    <Property Name="Menuo" Type="Int32" Nullable="false" />
+    <Property Name="Diena" Type="Int32" Nullable="false" />
+    <Property Name="Laikas" Type="Int32" Nullable="false" />
+    <Property Name="Reiksmingas" Type="Boolean" />
+    <Property Name="fk_id_Vieta" Type="Int32" />
+    <NavigationProperty Name="Vieta" Relationship="Self.FK__Menesio_p__fk_id__4E88ABD4" FromRole="Menesio_prognoze" ToRole="Vieta" />
+    <NavigationProperty Name="Prognazuojama_preke" Relationship="Self.FK__Prognazuo__fk_id__5165187F" FromRole="Menesio_prognoze" ToRole="Prognazuojama_preke" />
+  </EntityType>
+  <EntityType Name="Prisijungimas">
+    <Key>
+      <PropertyRef Name="id_Prisijungimas" />
+    </Key>
+    <Property Name="id_Prisijungimas" Type="Int32" Nullable="false" />
+    <Property Name="Vardas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Slaptazodis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Teises" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Darbuotojas" Relationship="Self.FK__Darbuotoj__fk_id__3C69FB99" FromRole="Prisijungimas" ToRole="Darbuotojas" />
+    <NavigationProperty Name="Kortele" Relationship="Self.FK__Kortele__fk_id_P__403A8C7D" FromRole="Prisijungimas" ToRole="Kortele" />
+  </EntityType>
+  <EntityType Name="Produktas">
+    <Key>
+      <PropertyRef Name="id_Produktas" />
+    </Key>
+    <Property Name="id_Produktas" Type="Int32" Nullable="false" />
+    <Property Name="Pagaminimo_data" Type="DateTime" Precision="0" />
+    <Property Name="Pardavimo_data" Type="DateTime" Precision="0" />
+    <Property Name="Galiojimo_data" Type="DateTime" Precision="0" />
+    <Property Name="Kiekis" Type="Double" Nullable="false" />
+    <Property Name="Busena" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fk_id_Vieta" Type="Int32" />
+    <Property Name="fk_id_Uzsakomos_prekes" Type="Int32" Nullable="false" />
+    <Property Name="fk_id_Produkto_specifikacija" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vieta" Relationship="Self.FK__Produktas__fk_id__5535A963" FromRole="Produktas" ToRole="Vieta" />
+    <NavigationProperty Name="Uzsakomos_prekes" Relationship="Self.FK__Produktas__fk_id__5629CD9C" FromRole="Produktas" ToRole="Uzsakomos_prekes" />
+    <NavigationProperty Name="Produkto_specifikacija" Relationship="Self.FK__Produktas__fk_id__571DF1D5" FromRole="Produktas" ToRole="Produkto_specifikacija" />
+  </EntityType>
+  <EntityType Name="Produkto_specifikacija">
+    <Key>
+      <PropertyRef Name="id_Produkto_specifikacija" />
+    </Key>
+    <Property Name="id_Produkto_specifikacija" Type="Int32" Nullable="false" />
+    <Property Name="Pavadinimas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Svoris" Type="Double" Nullable="false" />
+    <Property Name="Kaina" Type="Double" Nullable="false" />
+    <Property Name="Nuolaida" Type="Double" />
+    <Property Name="Kiekis" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Produktas" Relationship="Self.FK__Produktas__fk_id__571DF1D5" FromRole="Produkto_specifikacija" ToRole="Produktas" />
+    <NavigationProperty Name="Prognazuojama_preke" Relationship="Self.FK__Prognazuo__fk_id__52593CB8" FromRole="Produkto_specifikacija" ToRole="Prognazuojama_preke" />
+  </EntityType>
+  <EntityType Name="Prognazuojama_preke">
+    <Key>
+      <PropertyRef Name="id_Prognazuojama_preke" />
+    </Key>
+    <Property Name="id_Prognazuojama_preke" Type="Int32" Nullable="false" />
+    <Property Name="Uzsakymo_kiekis" Type="Double" Nullable="false" />
+    <Property Name="Reikalingas_kiekis" Type="Double" Nullable="false" />
+    <Property Name="Pirkimo_prognoze" Type="Double" Nullable="false" />
+    <Property Name="fk_id_Menesio_prognoze" Type="Int32" Nullable="false" />
+    <Property Name="fk_id_Produkto_specifikacija" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menesio_prognoze" Relationship="Self.FK__Prognazuo__fk_id__5165187F" FromRole="Prognazuojama_preke" ToRole="Menesio_prognoze" />
+    <NavigationProperty Name="Produkto_specifikacija" Relationship="Self.FK__Prognazuo__fk_id__52593CB8" FromRole="Prognazuojama_preke" ToRole="Produkto_specifikacija" />
+  </EntityType>
+  <EntityType Name="Uzsakymas">
+    <Key>
+      <PropertyRef Name="id_Uzsakymas" />
+    </Key>
+    <Property Name="id_Uzsakymas" Type="Int32" Nullable="false" />
+    <Property Name="Data" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fk_id_Vieta" Type="Int32" Nullable="false" />
+    <Property Name="fk_id_Darbuotojas" Type="Int32" Nullable="false" />
+    <Property Name="fk_id_Kortele" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Darbuotojas" Relationship="Self.FK__Uzsakymas__fk_id__47DBAE45" FromRole="Uzsakymas" ToRole="Darbuotojas" />
+    <NavigationProperty Name="Kortele" Relationship="Self.FK__Uzsakymas__fk_id__48CFD27E" FromRole="Uzsakymas" ToRole="Kortele" />
+    <NavigationProperty Name="Vieta" Relationship="Self.FK__Uzsakymas__fk_id__46E78A0C" FromRole="Uzsakymas" ToRole="Vieta" />
+    <NavigationProperty Name="Uzsakomos_prekes" Relationship="Self.FK__Uzsakomos__fk_id__4BAC3F29" FromRole="Uzsakymas" ToRole="Uzsakomos_prekes" />
+  </EntityType>
+  <EntityType Name="Uzsakomos_prekes">
+    <Key>
+      <PropertyRef Name="id_Uzsakomos_prekes" />
+    </Key>
+    <Property Name="id_Uzsakomos_prekes" Type="Int32" Nullable="false" />
+    <Property Name="Kiekis" Type="Double" Nullable="false" />
+    <Property Name="Patvirtintas" Type="Boolean" />
+    <Property Name="Pakestas" Type="Boolean" />
+    <Property Name="Kaina" Type="Double" Nullable="false" />
+    <Property Name="Nuolaida" Type="Double" />
+    <Property Name="fk_id_Uzsakymas" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Produktas" Relationship="Self.FK__Produktas__fk_id__5629CD9C" FromRole="Uzsakomos_prekes" ToRole="Produktas" />
+    <NavigationProperty Name="Uzsakymas" Relationship="Self.FK__Uzsakomos__fk_id__4BAC3F29" FromRole="Uzsakomos_prekes" ToRole="Uzsakymas" />
+  </EntityType>
+  <EntityType Name="Vieta">
+    <Key>
+      <PropertyRef Name="id_Vieta" />
+    </Key>
+    <Property Name="id_Vieta" Type="Int32" Nullable="false" />
+    <Property Name="Pavadinimas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Adresas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Paskirtis" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Darbuotojas" Relationship="Self.FK__Darbuotoj__fk_id__3D5E1FD2" FromRole="Vieta" ToRole="Darbuotojas" />
+    <NavigationProperty Name="Darbuotojo_menesio_ataskaita" Relationship="Self.FK__Darbuotoj__fk_id__4316F928" FromRole="Vieta" ToRole="Darbuotojo_menesio_ataskaita" />
+    <NavigationProperty Name="Menesio_prognoze" Relationship="Self.FK__Menesio_p__fk_id__4E88ABD4" FromRole="Vieta" ToRole="Menesio_prognoze" />
+    <NavigationProperty Name="Produktas" Relationship="Self.FK__Produktas__fk_id__5535A963" FromRole="Vieta" ToRole="Produktas" />
+    <NavigationProperty Name="Uzsakymas" Relationship="Self.FK__Uzsakymas__fk_id__46E78A0C" FromRole="Vieta" ToRole="Uzsakymas" />
+  </EntityType>
+  <Association Name="FK__Darbuotoj__fk_id__3C69FB99">
+    <End Role="Prisijungimas" Type="Self.Prisijungimas" Multiplicity="1" />
+    <End Role="Darbuotojas" Type="Self.Darbuotojas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prisijungimas">
+        <PropertyRef Name="id_Prisijungimas" />
+      </Principal>
+      <Dependent Role="Darbuotojas">
+        <PropertyRef Name="fk_id_Prisijungimas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Darbuotoj__fk_id__3D5E1FD2">
+    <End Role="Vieta" Type="Self.Vieta" Multiplicity="1" />
+    <End Role="Darbuotojas" Type="Self.Darbuotojas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vieta">
+        <PropertyRef Name="id_Vieta" />
+      </Principal>
+      <Dependent Role="Darbuotojas">
+        <PropertyRef Name="fk_id_Vieta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Darbuotoj__fk_id__440B1D61">
+    <End Role="Darbuotojas" Type="Self.Darbuotojas" Multiplicity="0..1" />
+    <End Role="Darbuotojo_menesio_ataskaita" Type="Self.Darbuotojo_menesio_ataskaita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Darbuotojas">
+        <PropertyRef Name="id_Darbuotojas" />
+      </Principal>
+      <Dependent Role="Darbuotojo_menesio_ataskaita">
+        <PropertyRef Name="fk_id_Darbuotojas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Uzsakymas__fk_id__47DBAE45">
+    <End Role="Darbuotojas" Type="Self.Darbuotojas" Multiplicity="1" />
+    <End Role="Uzsakymas" Type="Self.Uzsakymas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Darbuotojas">
+        <PropertyRef Name="id_Darbuotojas" />
+      </Principal>
+      <Dependent Role="Uzsakymas">
+        <PropertyRef Name="fk_id_Darbuotojas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Darbuotoj__fk_id__4316F928">
+    <End Role="Vieta" Type="Self.Vieta" Multiplicity="0..1" />
+    <End Role="Darbuotojo_menesio_ataskaita" Type="Self.Darbuotojo_menesio_ataskaita" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vieta">
+        <PropertyRef Name="id_Vieta" />
+      </Principal>
+      <Dependent Role="Darbuotojo_menesio_ataskaita">
+        <PropertyRef Name="fk_id_Vieta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Kortele__fk_id_P__403A8C7D">
+    <End Role="Prisijungimas" Type="Self.Prisijungimas" Multiplicity="1" />
+    <End Role="Kortele" Type="Self.Kortele" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prisijungimas">
+        <PropertyRef Name="id_Prisijungimas" />
+      </Principal>
+      <Dependent Role="Kortele">
+        <PropertyRef Name="fk_id_Prisijungimas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Uzsakymas__fk_id__48CFD27E">
+    <End Role="Kortele" Type="Self.Kortele" Multiplicity="1" />
+    <End Role="Uzsakymas" Type="Self.Uzsakymas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kortele">
+        <PropertyRef Name="id_Kortele" />
+      </Principal>
+      <Dependent Role="Uzsakymas">
+        <PropertyRef Name="fk_id_Kortele" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menesio_p__fk_id__4E88ABD4">
+    <End Role="Vieta" Type="Self.Vieta" Multiplicity="0..1" />
+    <End Role="Menesio_prognoze" Type="Self.Menesio_prognoze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vieta">
+        <PropertyRef Name="id_Vieta" />
+      </Principal>
+      <Dependent Role="Menesio_prognoze">
+        <PropertyRef Name="fk_id_Vieta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prognazuo__fk_id__5165187F">
+    <End Role="Menesio_prognoze" Type="Self.Menesio_prognoze" Multiplicity="1" />
+    <End Role="Prognazuojama_preke" Type="Self.Prognazuojama_preke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menesio_prognoze">
+        <PropertyRef Name="id_Menesio_prognoze" />
+      </Principal>
+      <Dependent Role="Prognazuojama_preke">
+        <PropertyRef Name="fk_id_Menesio_prognoze" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Produktas__fk_id__5535A963">
+    <End Role="Vieta" Type="Self.Vieta" Multiplicity="0..1" />
+    <End Role="Produktas" Type="Self.Produktas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vieta">
+        <PropertyRef Name="id_Vieta" />
+      </Principal>
+      <Dependent Role="Produktas">
+        <PropertyRef Name="fk_id_Vieta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Produktas__fk_id__5629CD9C">
+    <End Role="Uzsakomos_prekes" Type="Self.Uzsakomos_prekes" Multiplicity="1" />
+    <End Role="Produktas" Type="Self.Produktas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uzsakomos_prekes">
+        <PropertyRef Name="id_Uzsakomos_prekes" />
+      </Principal>
+      <Dependent Role="Produktas">
+        <PropertyRef Name="fk_id_Uzsakomos_prekes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Produktas__fk_id__571DF1D5">
+    <End Role="Produkto_specifikacija" Type="Self.Produkto_specifikacija" Multiplicity="1" />
+    <End Role="Produktas" Type="Self.Produktas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produkto_specifikacija">
+        <PropertyRef Name="id_Produkto_specifikacija" />
+      </Principal>
+      <Dependent Role="Produktas">
+        <PropertyRef Name="fk_id_Produkto_specifikacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prognazuo__fk_id__52593CB8">
+    <End Role="Produkto_specifikacija" Type="Self.Produkto_specifikacija" Multiplicity="1" />
+    <End Role="Prognazuojama_preke" Type="Self.Prognazuojama_preke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produkto_specifikacija">
+        <PropertyRef Name="id_Produkto_specifikacija" />
+      </Principal>
+      <Dependent Role="Prognazuojama_preke">
+        <PropertyRef Name="fk_id_Produkto_specifikacija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Uzsakymas__fk_id__46E78A0C">
+    <End Role="Vieta" Type="Self.Vieta" Multiplicity="1" />
+    <End Role="Uzsakymas" Type="Self.Uzsakymas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vieta">
+        <PropertyRef Name="id_Vieta" />
+      </Principal>
+      <Dependent Role="Uzsakymas">
+        <PropertyRef Name="fk_id_Vieta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Uzsakomos__fk_id__4BAC3F29">
+    <End Role="Uzsakymas" Type="Self.Uzsakymas" Multiplicity="1" />
+    <End Role="Uzsakomos_prekes" Type="Self.Uzsakomos_prekes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uzsakymas">
+        <PropertyRef Name="id_Uzsakymas" />
+      </Principal>
+      <Dependent Role="Uzsakomos_prekes">
+        <PropertyRef Name="fk_id_Uzsakymas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ITEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Darbuotojas" EntityType="Self.Darbuotojas" />
+    <EntitySet Name="Darbuotojo_menesio_ataskaita" EntityType="Self.Darbuotojo_menesio_ataskaita" />
+    <EntitySet Name="Kortele" EntityType="Self.Kortele" />
+    <EntitySet Name="Menesio_prognoze" EntityType="Self.Menesio_prognoze" />
+    <EntitySet Name="Prisijungimas" EntityType="Self.Prisijungimas" />
+    <EntitySet Name="Produktas" EntityType="Self.Produktas" />
+    <EntitySet Name="Produkto_specifikacija" EntityType="Self.Produkto_specifikacija" />
+    <EntitySet Name="Prognazuojama_preke" EntityType="Self.Prognazuojama_preke" />
+    <EntitySet Name="Uzsakymas" EntityType="Self.Uzsakymas" />
+    <EntitySet Name="Uzsakomos_prekes" EntityType="Self.Uzsakomos_prekes" />
+    <EntitySet Name="Vieta" EntityType="Self.Vieta" />
+    <AssociationSet Name="FK__Darbuotoj__fk_id__3C69FB99" Association="Self.FK__Darbuotoj__fk_id__3C69FB99">
+      <End Role="Prisijungimas" EntitySet="Prisijungimas" />
+      <End Role="Darbuotojas" EntitySet="Darbuotojas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Darbuotoj__fk_id__3D5E1FD2" Association="Self.FK__Darbuotoj__fk_id__3D5E1FD2">
+      <End Role="Vieta" EntitySet="Vieta" />
+      <End Role="Darbuotojas" EntitySet="Darbuotojas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Darbuotoj__fk_id__440B1D61" Association="Self.FK__Darbuotoj__fk_id__440B1D61">
+      <End Role="Darbuotojas" EntitySet="Darbuotojas" />
+      <End Role="Darbuotojo_menesio_ataskaita" EntitySet="Darbuotojo_menesio_ataskaita" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Uzsakymas__fk_id__47DBAE45" Association="Self.FK__Uzsakymas__fk_id__47DBAE45">
+      <End Role="Darbuotojas" EntitySet="Darbuotojas" />
+      <End Role="Uzsakymas" EntitySet="Uzsakymas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Darbuotoj__fk_id__4316F928" Association="Self.FK__Darbuotoj__fk_id__4316F928">
+      <End Role="Vieta" EntitySet="Vieta" />
+      <End Role="Darbuotojo_menesio_ataskaita" EntitySet="Darbuotojo_menesio_ataskaita" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Kortele__fk_id_P__403A8C7D" Association="Self.FK__Kortele__fk_id_P__403A8C7D">
+      <End Role="Prisijungimas" EntitySet="Prisijungimas" />
+      <End Role="Kortele" EntitySet="Kortele" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Uzsakymas__fk_id__48CFD27E" Association="Self.FK__Uzsakymas__fk_id__48CFD27E">
+      <End Role="Kortele" EntitySet="Kortele" />
+      <End Role="Uzsakymas" EntitySet="Uzsakymas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menesio_p__fk_id__4E88ABD4" Association="Self.FK__Menesio_p__fk_id__4E88ABD4">
+      <End Role="Vieta" EntitySet="Vieta" />
+      <End Role="Menesio_prognoze" EntitySet="Menesio_prognoze" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prognazuo__fk_id__5165187F" Association="Self.FK__Prognazuo__fk_id__5165187F">
+      <End Role="Menesio_prognoze" EntitySet="Menesio_prognoze" />
+      <End Role="Prognazuojama_preke" EntitySet="Prognazuojama_preke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Produktas__fk_id__5535A963" Association="Self.FK__Produktas__fk_id__5535A963">
+      <End Role="Vieta" EntitySet="Vieta" />
+      <End Role="Produktas" EntitySet="Produktas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Produktas__fk_id__5629CD9C" Association="Self.FK__Produktas__fk_id__5629CD9C">
+      <End Role="Uzsakomos_prekes" EntitySet="Uzsakomos_prekes" />
+      <End Role="Produktas" EntitySet="Produktas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Produktas__fk_id__571DF1D5" Association="Self.FK__Produktas__fk_id__571DF1D5">
+      <End Role="Produkto_specifikacija" EntitySet="Produkto_specifikacija" />
+      <End Role="Produktas" EntitySet="Produktas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prognazuo__fk_id__52593CB8" Association="Self.FK__Prognazuo__fk_id__52593CB8">
+      <End Role="Produkto_specifikacija" EntitySet="Produkto_specifikacija" />
+      <End Role="Prognazuojama_preke" EntitySet="Prognazuojama_preke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Uzsakymas__fk_id__46E78A0C" Association="Self.FK__Uzsakymas__fk_id__46E78A0C">
+      <End Role="Vieta" EntitySet="Vieta" />
+      <End Role="Uzsakymas" EntitySet="Uzsakymas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Uzsakomos__fk_id__4BAC3F29" Association="Self.FK__Uzsakomos__fk_id__4BAC3F29">
+      <End Role="Uzsakymas" EntitySet="Uzsakymas" />
+      <End Role="Uzsakomos_prekes" EntitySet="Uzsakomos_prekes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

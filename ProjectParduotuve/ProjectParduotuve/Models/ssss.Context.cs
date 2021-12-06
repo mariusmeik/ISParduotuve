@@ -25,16 +25,16 @@ namespace ProjectParduotuve.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Darbuotoja> Darbuotojas { get; set; }
-        public virtual DbSet<Darbuotojo_menesio_ataskaita> Darbuotojo_menesio_ataskaita { get; set; }
-        public virtual DbSet<Kortele> Korteles { get; set; }
-        public virtual DbSet<Menesio_prognoze> Menesio_prognoze { get; set; }
-        public virtual DbSet<Prisijungima> Prisijungimas { get; set; }
-        public virtual DbSet<Produkta> Produktas { get; set; }
-        public virtual DbSet<Produkto_specifikacija> Produkto_specifikacija { get; set; }
-        public virtual DbSet<Prognazuojama_preke> Prognazuojama_preke { get; set; }
-        public virtual DbSet<Uzsakomos_prekes> Uzsakomos_prekes { get; set; }
-        public virtual DbSet<Uzsakyma> Uzsakymas { get; set; }
-        public virtual DbSet<Vieta> Vietas { get; set; }
+        //public virtual DbSet<Darbuotoja> Darbuotojas { get; set; }
+        //public virtual DbSet<Darbuotojo_menesio_ataskaita> Darbuotojo_menesio_ataskaita { get; set; }
+        //public virtual DbSet<Kortele> Korteles { get; set; }
+        //public virtual DbSet<Menesio_prognoze> Menesio_prognoze { get; set; }
+        //public virtual DbSet<Prisijungima> Prisijungimas { get; set; }
+        //public virtual DbSet<Produkta> Produktas { get; set; }
+        //public virtual DbSet<Produkto_specifikacija> Produkto_specifikacija { get; set; }
+        //public virtual DbSet<Prognazuojama_preke> Prognazuojama_preke { get; set; }
+        //public virtual DbSet<Uzsakomos_prekes> Uzsakomos_prekes { get; set; }
+        //public virtual DbSet<Uzsakyma> Uzsakymas { get; set; }
+        //public virtual DbSet<Vieta> Vietas { get; set; }
     }
 }

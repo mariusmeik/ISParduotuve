@@ -1,0 +1,42 @@
+﻿@model ProjectParduotuve.Models.Prisijungimas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prisijungimas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vardas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vardas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slaptazodis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slaptazodis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teises)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teises)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Prisijungimas }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

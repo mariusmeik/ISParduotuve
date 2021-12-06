@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ProjectParduotuve.Models.Uzsakomos_prekes>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kiekis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patvirtintas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pakestas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kaina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nuolaida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uzsakymas.id_Uzsakymas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kiekis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patvirtintas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pakestas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kaina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nuolaida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uzsakymas.id_Uzsakymas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Uzsakomos_prekes }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Uzsakomos_prekes }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_Uzsakomos_prekes })
+        </td>
+    </tr>
+}
+
+</table>

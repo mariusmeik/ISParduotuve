@@ -1,0 +1,72 @@
+﻿@model ProjectParduotuve.Models.Uzsakomos_prekes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Uzsakomos_prekes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kiekis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patvirtintas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patvirtintas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pakestas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pakestas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kaina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kaina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nuolaida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nuolaida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uzsakymas.id_Uzsakymas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uzsakymas.id_Uzsakymas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

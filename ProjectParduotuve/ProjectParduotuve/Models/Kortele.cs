@@ -17,7 +17,7 @@ namespace ProjectParduotuve.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Kortele()
         {
-            this.Uzsakymas = new HashSet<Uzsakyma>();
+            this.Uzsakymas = new HashSet<Uzsakymas>();
         }
     
         public int id_Kortele { get; set; }
@@ -30,8 +30,8 @@ namespace ProjectParduotuve.Models
         public bool Aktyvus { get; set; }
         public int fk_id_Prisijungimas { get; set; }
     
-        public virtual Prisijungima Prisijungima { get; set; }
+        public virtual Prisijungimas Prisijungimas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Uzsakyma> Uzsakymas { get; set; }
+        public virtual ICollection<Uzsakymas> Uzsakymas { get; set; }
     }
 }

@@ -17,11 +17,11 @@ namespace ProjectParduotuve.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Vieta()
         {
-            this.Darbuotojas = new HashSet<Darbuotoja>();
+            this.Darbuotojas = new HashSet<Darbuotojas>();
             this.Darbuotojo_menesio_ataskaita = new HashSet<Darbuotojo_menesio_ataskaita>();
             this.Menesio_prognoze = new HashSet<Menesio_prognoze>();
-            this.Produktas = new HashSet<Produkta>();
-            this.Uzsakymas = new HashSet<Uzsakyma>();
+            this.Produktas = new HashSet<Produktas>();
+            this.Uzsakymas = new HashSet<Uzsakymas>();
         }
     
         public int id_Vieta { get; set; }
@@ -30,14 +30,14 @@ namespace ProjectParduotuve.Models
         public string Paskirtis { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Darbuotoja> Darbuotojas { get; set; }
+        public virtual ICollection<Darbuotojas> Darbuotojas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Darbuotojo_menesio_ataskaita> Darbuotojo_menesio_ataskaita { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Menesio_prognoze> Menesio_prognoze { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Produkta> Produktas { get; set; }
+        public virtual ICollection<Produktas> Produktas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Uzsakyma> Uzsakymas { get; set; }
+        public virtual ICollection<Uzsakymas> Uzsakymas { get; set; }
     }
 }

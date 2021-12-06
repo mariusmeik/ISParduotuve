@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ITModelStoreContainer" CdmEntityContainer="ITEntities">
+    <EntitySetMapping Name="Darbuotojas">
+      <EntityTypeMapping TypeName="ITModel.Darbuotoja">
+        <MappingFragment StoreEntitySet="Darbuotojas">
+          <ScalarProperty Name="id_Darbuotojas" ColumnName="id_Darbuotojas" />
+          <ScalarProperty Name="Vardas" ColumnName="Vardas" />
+          <ScalarProperty Name="Pavarde" ColumnName="Pavarde" />
+          <ScalarProperty Name="El_pastas" ColumnName="El_pastas" />
+          <ScalarProperty Name="Telefonas" ColumnName="Telefonas" />
+          <ScalarProperty Name="Dirba_nuo" ColumnName="Dirba_nuo" />
+          <ScalarProperty Name="Dirba_iki" ColumnName="Dirba_iki" />
+          <ScalarProperty Name="Aktyvus" ColumnName="Aktyvus" />
+          <ScalarProperty Name="Pareigos" ColumnName="Pareigos" />
+          <ScalarProperty Name="fk_id_Prisijungimas" ColumnName="fk_id_Prisijungimas" />
+          <ScalarProperty Name="fk_id_Vieta" ColumnName="fk_id_Vieta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Darbuotojo_menesio_ataskaita">
+      <EntityTypeMapping TypeName="ITModel.Darbuotojo_menesio_ataskaita">
+        <MappingFragment StoreEntitySet="Darbuotojo_menesio_ataskaita">
+          <ScalarProperty Name="id_Darbuotojo_menesio_ataskaita" ColumnName="id_Darbuotojo_menesio_ataskaita" />
+          <ScalarProperty Name="Metai" ColumnName="Metai" />
+          <ScalarProperty Name="Menuo" ColumnName="Menuo" />
+          <ScalarProperty Name="Dirba_nuo_h" ColumnName="Dirba_nuo_h" />
+          <ScalarProperty Name="Dirba_iki_h" ColumnName="Dirba_iki_h" />
+          <ScalarProperty Name="Darbo_dienos" ColumnName="Darbo_dienos" />
+          <ScalarProperty Name="Atlyginimas" ColumnName="Atlyginimas" />
+          <ScalarProperty Name="Pelnas" ColumnName="Pelnas" />
+          <ScalarProperty Name="Pareigos" ColumnName="Pareigos" />
+          <ScalarProperty Name="fk_id_Vieta" ColumnName="fk_id_Vieta" />
+          <ScalarProperty Name="fk_id_Darbuotojas" ColumnName="fk_id_Darbuotojas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korteles">
+      <EntityTypeMapping TypeName="ITModel.Kortele">
+        <MappingFragment StoreEntitySet="Kortele">
+          <ScalarProperty Name="id_Kortele" ColumnName="id_Kortele" />
+          <ScalarProperty Name="Vardas" ColumnName="Vardas" />
+          <ScalarProperty Name="Pavarde" ColumnName="Pavarde" />
+          <ScalarProperty Name="El_pastas" ColumnName="El_pastas" />
+          <ScalarProperty Name="Telefonas" ColumnName="Telefonas" />
+          <ScalarProperty Name="Galioja_iki" ColumnName="Galioja_iki" />
+          <ScalarProperty Name="Galioja_nuo" ColumnName="Galioja_nuo" />
+          <ScalarProperty Name="Aktyvus" ColumnName="Aktyvus" />
+          <ScalarProperty Name="fk_id_Prisijungimas" ColumnName="fk_id_Prisijungimas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menesio_prognoze">
+      <EntityTypeMapping TypeName="ITModel.Menesio_prognoze">
+        <MappingFragment StoreEntitySet="Menesio_prognoze">
+          <ScalarProperty Name="id_Menesio_prognoze" ColumnName="id_Menesio_prognoze" />
+          <ScalarProperty Name="Metai" ColumnName="Metai" />
+          <ScalarProperty Name="Menuo" ColumnName="Menuo" />
+          <ScalarProperty Name="Diena" ColumnName="Diena" />
+          <ScalarProperty Name="Laikas" ColumnName="Laikas" />
+          <ScalarProperty Name="Reiksmingas" ColumnName="Reiksmingas" />
+          <ScalarProperty Name="fk_id_Vieta" ColumnName="fk_id_Vieta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prisijungimas">
+      <EntityTypeMapping TypeName="ITModel.Prisijungima">
+        <MappingFragment StoreEntitySet="Prisijungimas">
+          <ScalarProperty Name="id_Prisijungimas" ColumnName="id_Prisijungimas" />
+          <ScalarProperty Name="Vardas" ColumnName="Vardas" />
+          <ScalarProperty Name="Slaptazodis" ColumnName="Slaptazodis" />
+          <ScalarProperty Name="Teises" ColumnName="Teises" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produktas">
+      <EntityTypeMapping TypeName="ITModel.Produkta">
+        <MappingFragment StoreEntitySet="Produktas">
+          <ScalarProperty Name="id_Produktas" ColumnName="id_Produktas" />
+          <ScalarProperty Name="Pagaminimo_data" ColumnName="Pagaminimo_data" />
+          <ScalarProperty Name="Pardavimo_data" ColumnName="Pardavimo_data" />
+          <ScalarProperty Name="Galiojimo_data" ColumnName="Galiojimo_data" />
+          <ScalarProperty Name="Kiekis" ColumnName="Kiekis" />
+          <ScalarProperty Name="Busena" ColumnName="Busena" />
+          <ScalarProperty Name="fk_id_Vieta" ColumnName="fk_id_Vieta" />
+          <ScalarProperty Name="fk_id_Uzsakomos_prekes" ColumnName="fk_id_Uzsakomos_prekes" />
+          <ScalarProperty Name="fk_id_Produkto_specifikacija" ColumnName="fk_id_Produkto_specifikacija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produkto_specifikacija">
+      <EntityTypeMapping TypeName="ITModel.Produkto_specifikacija">
+        <MappingFragment StoreEntitySet="Produkto_specifikacija">
+          <ScalarProperty Name="id_Produkto_specifikacija" ColumnName="id_Produkto_specifikacija" />
+          <ScalarProperty Name="Pavadinimas" ColumnName="Pavadinimas" />
+          <ScalarProperty Name="Svoris" ColumnName="Svoris" />
+          <ScalarProperty Name="Kaina" ColumnName="Kaina" />
+          <ScalarProperty Name="Nuolaida" ColumnName="Nuolaida" />
+          <ScalarProperty Name="Kiekis" ColumnName="Kiekis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prognazuojama_preke">
+      <EntityTypeMapping TypeName="ITModel.Prognazuojama_preke">
+        <MappingFragment StoreEntitySet="Prognazuojama_preke">
+          <ScalarProperty Name="id_Prognazuojama_preke" ColumnName="id_Prognazuojama_preke" />
+          <ScalarProperty Name="Uzsakymo_kiekis" ColumnName="Uzsakymo_kiekis" />
+          <ScalarProperty Name="Reikalingas_kiekis" ColumnName="Reikalingas_kiekis" />
+          <ScalarProperty Name="Pirkimo_prognoze" ColumnName="Pirkimo_prognoze" />
+          <ScalarProperty Name="fk_id_Menesio_prognoze" ColumnName="fk_id_Menesio_prognoze" />
+          <ScalarProperty Name="fk_id_Produkto_specifikacija" ColumnName="fk_id_Produkto_specifikacija" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uzsakomos_prekes">
+      <EntityTypeMapping TypeName="ITModel.Uzsakomos_prekes">
+        <MappingFragment StoreEntitySet="Uzsakomos_prekes">
+          <ScalarProperty Name="id_Uzsakomos_prekes" ColumnName="id_Uzsakomos_prekes" />
+          <ScalarProperty Name="Kiekis" ColumnName="Kiekis" />
+          <ScalarProperty Name="Patvirtintas" ColumnName="Patvirtintas" />
+          <ScalarProperty Name="Pakestas" ColumnName="Pakestas" />
+          <ScalarProperty Name="Kaina" ColumnName="Kaina" />
+          <ScalarProperty Name="Nuolaida" ColumnName="Nuolaida" />
+          <ScalarProperty Name="fk_id_Uzsakymas" ColumnName="fk_id_Uzsakymas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uzsakymas">
+      <EntityTypeMapping TypeName="ITModel.Uzsakyma">
+        <MappingFragment StoreEntitySet="Uzsakymas">
+          <ScalarProperty Name="id_Uzsakymas" ColumnName="id_Uzsakymas" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="fk_id_Vieta" ColumnName="fk_id_Vieta" />
+          <ScalarProperty Name="fk_id_Darbuotojas" ColumnName="fk_id_Darbuotojas" />
+          <ScalarProperty Name="fk_id_Kortele" ColumnName="fk_id_Kortele" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vietas">
+      <EntityTypeMapping TypeName="ITModel.Vieta">
+        <MappingFragment StoreEntitySet="Vieta">
+          <ScalarProperty Name="id_Vieta" ColumnName="id_Vieta" />
+          <ScalarProperty Name="Pavadinimas" ColumnName="Pavadinimas" />
+          <ScalarProperty Name="Adresas" ColumnName="Adresas" />
+          <ScalarProperty Name="Paskirtis" ColumnName="Paskirtis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

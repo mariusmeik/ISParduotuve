@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ProjectParduotuve.Models.Produktas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pagaminimo_data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pardavimo_data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Galiojimo_data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kiekis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Busena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vieta.Pavadinimas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uzsakomos_prekes.id_Uzsakomos_prekes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Produkto_specifikacija.Pavadinimas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pagaminimo_data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pardavimo_data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Galiojimo_data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kiekis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Busena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vieta.Pavadinimas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uzsakomos_prekes.id_Uzsakomos_prekes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produkto_specifikacija.Pavadinimas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Produktas }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Produktas }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_Produktas })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,82 @@
+﻿@model ProjectParduotuve.Models.DarbuotojoMenesioAtaskaita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DarbuotojoMenesioAtaskaita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.metai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.metai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.menuo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.menuo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dirbaNuoH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dirbaNuoH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dirbaIkiH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dirbaIkiH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.darboDienos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.darboDienos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.atlyginimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.atlyginimas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pelnas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pelnas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pareigos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pareigos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

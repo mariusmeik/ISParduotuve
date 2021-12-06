@@ -1,0 +1,66 @@
+﻿@model ProjectParduotuve.Models.Menesio_prognoze
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Menesio_prognoze</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Metai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Metai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menuo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menuo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laikas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laikas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reiksmingas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reiksmingas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vieta.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vieta.Pavadinimas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Menesio_prognoze }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

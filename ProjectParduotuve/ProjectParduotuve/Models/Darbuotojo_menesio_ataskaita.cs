@@ -26,7 +26,7 @@ namespace ProjectParduotuve.Models
         public Nullable<int> fk_id_Vieta { get; set; }
         public Nullable<int> fk_id_Darbuotojas { get; set; }
     
-        public virtual Darbuotoja Darbuotoja { get; set; }
+        public virtual Darbuotojas Darbuotojas { get; set; }
         public virtual Vieta Vieta { get; set; }
     }
 }

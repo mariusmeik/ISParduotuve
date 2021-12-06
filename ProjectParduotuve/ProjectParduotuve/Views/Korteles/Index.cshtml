@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ProjectParduotuve.Models.Kortele>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vardas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pavarde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.El_pastas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefonas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Galioja_iki)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Galioja_nuo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aktyvus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prisijungimas.Vardas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vardas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pavarde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.El_pastas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefonas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Galioja_iki)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Galioja_nuo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aktyvus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prisijungimas.Vardas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Kortele }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Kortele }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_Kortele })
+        </td>
+    </tr>
+}
+
+</table>

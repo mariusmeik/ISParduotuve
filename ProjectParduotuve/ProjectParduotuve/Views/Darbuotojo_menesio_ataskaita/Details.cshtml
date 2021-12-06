@@ -1,0 +1,98 @@
+﻿@model ProjectParduotuve.Models.Darbuotojo_menesio_ataskaita
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Darbuotojo_menesio_ataskaita</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Metai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Metai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menuo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menuo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dirba_nuo_h)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dirba_nuo_h)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dirba_iki_h)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dirba_iki_h)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Darbo_dienos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Darbo_dienos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Atlyginimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Atlyginimas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pelnas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pelnas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pareigos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pareigos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Darbuotojas.Vardas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Darbuotojas.Vardas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vieta.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vieta.Pavadinimas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Darbuotojo_menesio_ataskaita }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

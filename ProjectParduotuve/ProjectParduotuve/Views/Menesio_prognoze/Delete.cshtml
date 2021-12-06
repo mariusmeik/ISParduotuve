@@ -1,0 +1,72 @@
+﻿@model ProjectParduotuve.Models.Menesio_prognoze
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Menesio_prognoze</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Metai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Metai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menuo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menuo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laikas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laikas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reiksmingas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reiksmingas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vieta.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vieta.Pavadinimas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

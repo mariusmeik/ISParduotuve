@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc22b2b792e74d449234c0fe9f2aa78a" Name="Diagram1">
+        <EntityTypeShape EntityType="ITModel.Darbuotojas" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Darbuotojo_menesio_ataskaita" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Kortele" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Menesio_prognoze" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Prisijungimas" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Produktas" Width="1.5" PointX="12.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Produkto_specifikacija" Width="1.5" PointX="10.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Prognazuojama_preke" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Uzsakymas" Width="1.5" PointX="8.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Uzsakomos_prekes" Width="1.5" PointX="10.5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ITModel.Vieta" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="ITModel.FK__Darbuotoj__fk_id__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Darbuotoj__fk_id__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Darbuotoj__fk_id__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Uzsakymas__fk_id__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Darbuotoj__fk_id__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Kortele__fk_id_P__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Uzsakymas__fk_id__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Menesio_p__fk_id__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Prognazuo__fk_id__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Produktas__fk_id__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Produktas__fk_id__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Produktas__fk_id__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Prognazuo__fk_id__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Uzsakymas__fk_id__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="ITModel.FK__Uzsakomos__fk_id__4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -53,10 +53,10 @@
       <HintPath>..\packages\Azure.Identity.1.3.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -223,21 +223,75 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CardController.cs" />
-    <Compile Include="Controllers\CashierController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\BusenaEnumsController.cs" />
+    <Compile Include="Controllers\CardsController.cs" />
+    <Compile Include="Controllers\DarbuotojasController.cs" />
+    <Compile Include="Controllers\DarbuotojoMenesioAtaskaitasController.cs" />
+    <Compile Include="Controllers\Darbuotojo_menesio_ataskaitaController.cs" />
+    <Compile Include="Controllers\KortelesController.cs" />
     <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\WorkerController.cs" />
+    <Compile Include="Controllers\MenesioProognozesController.cs" />
+    <Compile Include="Controllers\Menesio_prognozeController.cs" />
+    <Compile Include="Controllers\PrisijungimasController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\ProductSpecsController.cs" />
+    <Compile Include="Controllers\ProduktasController.cs" />
+    <Compile Include="Controllers\Produkto_specifikacijaController.cs" />
+    <Compile Include="Controllers\ProognozuojamaPrekesController.cs" />
+    <Compile Include="Controllers\RightsTypesController.cs" />
+    <Compile Include="Controllers\UzsakomosPrekesController.cs" />
+    <Compile Include="Controllers\Uzsakomos_prekesController.cs" />
+    <Compile Include="Controllers\UzsakymasController.cs" />
+    <Compile Include="Controllers\VietasController.cs" />
+    <Compile Include="Controllers\WorkersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BusenaEnum.cs" />
     <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\ContosoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContosoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContosoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Darbuotojas.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DarbuotojoMenesioAtaskaita.cs" />
+    <Compile Include="Models\Darbuotojo_menesio_ataskaita.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Kortele.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MenesioProognoze.cs" />
+    <Compile Include="Models\Menesio_prognoze.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prisijungimas.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductSpec.cs" />
+    <Compile Include="Models\Produktas.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Produkto_specifikacija.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prognazuojama_preke.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ProognozuojamaPreke.cs" />
     <Compile Include="Models\RightsType.cs" />
     <Compile Include="Models\ssss.Context.cs">
@@ -245,14 +299,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ssss.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ssss.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ssss.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UzsakomosPrekes.cs" />
-    <Compile Include="Models\Vieta.cs" />
+    <Compile Include="Models\Uzsakomos_prekes.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Uzsakymas.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vieta.cs">
+      <DependentUpon>ContosoModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\ConnConfig.cs" />
@@ -269,19 +326,29 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\ContosoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContosoModel.edmx</DependentUpon>
+      <LastGenOutput>ContosoModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ContosoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContosoModel.edmx</DependentUpon>
+      <LastGenOutput>ContosoModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\ssss.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ssss.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\ssss.edmx">
+    <EntityDeploy Include="Models\ContosoModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ssss.Designer.cs</LastGenOutput>
+      <LastGenOutput>ContosoModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\ssss.edmx.diagram">
-      <DependentUpon>ssss.edmx</DependentUpon>
-    </None>
+    <Content Include="Models\ContosoModel.edmx.diagram">
+      <DependentUpon>ContosoModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -330,6 +397,106 @@
     <Content Include="Views\Product\SpecDelete.cshtml" />
     <Content Include="Views\Product\SpecDetails.cshtml" />
     <Content Include="Views\Product\SpecEdit.cshtml" />
+    <Content Include="Views\Korteles\Create.cshtml" />
+    <Content Include="Views\Korteles\Delete.cshtml" />
+    <Content Include="Views\Korteles\Details.cshtml" />
+    <Content Include="Views\Korteles\Edit.cshtml" />
+    <Content Include="Views\Korteles\Index.cshtml" />
+    <Content Include="Views\ProductSpecs\Create.cshtml" />
+    <Content Include="Views\ProductSpecs\Delete.cshtml" />
+    <Content Include="Views\ProductSpecs\Details.cshtml" />
+    <Content Include="Views\ProductSpecs\Edit.cshtml" />
+    <Content Include="Views\ProductSpecs\Index.cshtml" />
+    <Content Include="Views\BusenaEnums\Create.cshtml" />
+    <Content Include="Views\BusenaEnums\Delete.cshtml" />
+    <Content Include="Views\BusenaEnums\Details.cshtml" />
+    <Content Include="Views\BusenaEnums\Edit.cshtml" />
+    <Content Include="Views\BusenaEnums\Index.cshtml" />
+    <Content Include="Views\Cards\Create.cshtml" />
+    <Content Include="Views\Cards\Delete.cshtml" />
+    <Content Include="Views\Cards\Details.cshtml" />
+    <Content Include="Views\Cards\Edit.cshtml" />
+    <Content Include="Views\Cards\Index.cshtml" />
+    <Content Include="Views\Darbuotojas\Create.cshtml" />
+    <Content Include="Views\Darbuotojas\Delete.cshtml" />
+    <Content Include="Views\Darbuotojas\Details.cshtml" />
+    <Content Include="Views\Darbuotojas\Edit.cshtml" />
+    <Content Include="Views\Darbuotojas\Index.cshtml" />
+    <Content Include="Views\Darbuotojo_menesio_ataskaita\Create.cshtml" />
+    <Content Include="Views\Darbuotojo_menesio_ataskaita\Delete.cshtml" />
+    <Content Include="Views\Darbuotojo_menesio_ataskaita\Details.cshtml" />
+    <Content Include="Views\Darbuotojo_menesio_ataskaita\Edit.cshtml" />
+    <Content Include="Views\Darbuotojo_menesio_ataskaita\Index.cshtml" />
+    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Create.cshtml" />
+    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Delete.cshtml" />
+    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Details.cshtml" />
+    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Edit.cshtml" />
+    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Index.cshtml" />
+    <Content Include="Views\Menesio_prognoze\Create.cshtml" />
+    <Content Include="Views\Menesio_prognoze\Delete.cshtml" />
+    <Content Include="Views\Menesio_prognoze\Details.cshtml" />
+    <Content Include="Views\Menesio_prognoze\Edit.cshtml" />
+    <Content Include="Views\Menesio_prognoze\Index.cshtml" />
+    <Content Include="Views\MenesioProognozes\Create.cshtml" />
+    <Content Include="Views\MenesioProognozes\Delete.cshtml" />
+    <Content Include="Views\MenesioProognozes\Details.cshtml" />
+    <Content Include="Views\MenesioProognozes\Edit.cshtml" />
+    <Content Include="Views\MenesioProognozes\Index.cshtml" />
+    <Content Include="Views\Prisijungimas\Create.cshtml" />
+    <Content Include="Views\Prisijungimas\Delete.cshtml" />
+    <Content Include="Views\Prisijungimas\Details.cshtml" />
+    <Content Include="Views\Prisijungimas\Edit.cshtml" />
+    <Content Include="Views\Prisijungimas\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Produktas\Create.cshtml" />
+    <Content Include="Views\Produktas\Delete.cshtml" />
+    <Content Include="Views\Produktas\Details.cshtml" />
+    <Content Include="Views\Produktas\Edit.cshtml" />
+    <Content Include="Views\Produktas\Index.cshtml" />
+    <Content Include="Views\Produkto_specifikacija\Create.cshtml" />
+    <Content Include="Views\Produkto_specifikacija\Delete.cshtml" />
+    <Content Include="Views\Produkto_specifikacija\Details.cshtml" />
+    <Content Include="Views\Produkto_specifikacija\Edit.cshtml" />
+    <Content Include="Views\Produkto_specifikacija\Index.cshtml" />
+    <Content Include="Views\ProognozuojamaPrekes\Create.cshtml" />
+    <Content Include="Views\ProognozuojamaPrekes\Delete.cshtml" />
+    <Content Include="Views\ProognozuojamaPrekes\Details.cshtml" />
+    <Content Include="Views\ProognozuojamaPrekes\Edit.cshtml" />
+    <Content Include="Views\ProognozuojamaPrekes\Index.cshtml" />
+    <Content Include="Views\RightsTypes\Create.cshtml" />
+    <Content Include="Views\RightsTypes\Delete.cshtml" />
+    <Content Include="Views\RightsTypes\Details.cshtml" />
+    <Content Include="Views\RightsTypes\Edit.cshtml" />
+    <Content Include="Views\RightsTypes\Index.cshtml" />
+    <Content Include="Views\Uzsakomos_prekes\Create.cshtml" />
+    <Content Include="Views\Uzsakomos_prekes\Delete.cshtml" />
+    <Content Include="Views\Uzsakomos_prekes\Details.cshtml" />
+    <Content Include="Views\Uzsakomos_prekes\Edit.cshtml" />
+    <Content Include="Views\Uzsakomos_prekes\Index.cshtml" />
+    <Content Include="Views\UzsakomosPrekes\Create.cshtml" />
+    <Content Include="Views\UzsakomosPrekes\Delete.cshtml" />
+    <Content Include="Views\UzsakomosPrekes\Details.cshtml" />
+    <Content Include="Views\UzsakomosPrekes\Edit.cshtml" />
+    <Content Include="Views\UzsakomosPrekes\Index.cshtml" />
+    <Content Include="Views\Uzsakymas\Create.cshtml" />
+    <Content Include="Views\Uzsakymas\Delete.cshtml" />
+    <Content Include="Views\Uzsakymas\Details.cshtml" />
+    <Content Include="Views\Uzsakymas\Edit.cshtml" />
+    <Content Include="Views\Uzsakymas\Index.cshtml" />
+    <Content Include="Views\Vietas\Create.cshtml" />
+    <Content Include="Views\Vietas\Delete.cshtml" />
+    <Content Include="Views\Vietas\Details.cshtml" />
+    <Content Include="Views\Vietas\Edit.cshtml" />
+    <Content Include="Views\Vietas\Index.cshtml" />
+    <Content Include="Views\Workers\Create.cshtml" />
+    <Content Include="Views\Workers\Delete.cshtml" />
+    <Content Include="Views\Workers\Details.cshtml" />
+    <Content Include="Views\Workers\Edit.cshtml" />
+    <Content Include="Views\Workers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

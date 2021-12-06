@@ -1,0 +1,66 @@
+﻿@model ProjectParduotuve.Models.Uzsakomos_prekes
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Uzsakomos_prekes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kiekis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patvirtintas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patvirtintas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pakestas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pakestas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kaina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kaina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nuolaida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nuolaida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uzsakymas.id_Uzsakymas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uzsakymas.id_Uzsakymas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Uzsakomos_prekes }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

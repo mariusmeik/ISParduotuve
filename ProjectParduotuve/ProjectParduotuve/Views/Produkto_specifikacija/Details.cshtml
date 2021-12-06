@@ -1,0 +1,58 @@
+﻿@model ProjectParduotuve.Models.Produkto_specifikacija
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produkto_specifikacija</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pavadinimas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Svoris)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Svoris)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kaina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kaina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nuolaida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nuolaida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kiekis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Produkto_specifikacija }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

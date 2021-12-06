@@ -1,0 +1,87 @@
+﻿@model IEnumerable<ProjectParduotuve.Models.Darbuotojo_menesio_ataskaita>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Metai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menuo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dirba_nuo_h)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dirba_iki_h)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Darbo_dienos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Atlyginimas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pelnas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pareigos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Darbuotojas.Vardas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vieta.Pavadinimas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Metai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Menuo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dirba_nuo_h)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dirba_iki_h)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Darbo_dienos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Atlyginimas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pelnas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pareigos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Darbuotojas.Vardas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vieta.Pavadinimas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Darbuotojo_menesio_ataskaita }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Darbuotojo_menesio_ataskaita }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_Darbuotojo_menesio_ataskaita })
+        </td>
+    </tr>
+}
+
+</table>
