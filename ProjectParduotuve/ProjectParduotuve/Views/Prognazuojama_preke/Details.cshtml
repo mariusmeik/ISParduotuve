@@ -1,0 +1,58 @@
+﻿@model ProjectParduotuve.Models.Prognazuojama_preke
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prognazuojama_preke</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Uzsakymo_kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uzsakymo_kiekis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reikalingas_kiekis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reikalingas_kiekis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pirkimo_prognoze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pirkimo_prognoze)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Menesio_prognoze.id_Menesio_prognoze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Menesio_prognoze.id_Menesio_prognoze)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Produkto_specifikacija.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Produkto_specifikacija.Pavadinimas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Prognazuojama_preke }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

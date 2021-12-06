@@ -36,5 +36,7 @@ namespace ProjectParduotuve.Models
         public virtual DbSet<Uzsakymas> Uzsakymas { get; set; }
         public virtual DbSet<Uzsakomos_prekes> Uzsakomos_prekes { get; set; }
         public virtual DbSet<Vieta> Vieta { get; set; }
+
+       
     }
 }
