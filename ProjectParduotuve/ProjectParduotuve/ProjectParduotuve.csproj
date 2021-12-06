@@ -223,28 +223,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BusenaEnumsController.cs" />
-    <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Controllers\DarbuotojasController.cs" />
-    <Compile Include="Controllers\DarbuotojoMenesioAtaskaitasController.cs" />
     <Compile Include="Controllers\Darbuotojo_menesio_ataskaitaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KortelesController.cs" />
     <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Controllers\MenesioProognozesController.cs" />
     <Compile Include="Controllers\Menesio_prognozeController.cs" />
     <Compile Include="Controllers\PrisijungimasController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
-    <Compile Include="Controllers\ProductSpecsController.cs" />
     <Compile Include="Controllers\ProduktasController.cs" />
     <Compile Include="Controllers\Produkto_specifikacijaController.cs" />
-    <Compile Include="Controllers\ProognozuojamaPrekesController.cs" />
-    <Compile Include="Controllers\RightsTypesController.cs" />
-    <Compile Include="Controllers\UzsakomosPrekesController.cs" />
     <Compile Include="Controllers\Uzsakomos_prekesController.cs" />
     <Compile Include="Controllers\UzsakymasController.cs" />
     <Compile Include="Controllers\VietasController.cs" />
-    <Compile Include="Controllers\WorkersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
