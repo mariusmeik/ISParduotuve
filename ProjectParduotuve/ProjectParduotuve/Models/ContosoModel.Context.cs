@@ -37,24 +37,6 @@ namespace ProjectParduotuve.Models
         public virtual DbSet<Uzsakomos_prekes> Uzsakomos_prekes { get; set; }
         public virtual DbSet<Vieta> Vieta { get; set; }
 
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.ProductSpec> ProductSpecs { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.BusenaEnum> BusenaEnums { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.Card> Cards { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.DarbuotojoMenesioAtaskaita> DarbuotojoMenesioAtaskaitas { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.MenesioProognoze> MenesioProognozes { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.Product> Products { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.ProognozuojamaPreke> ProognozuojamaPrekes { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.RightsType> RightsTypes { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.UzsakomosPrekes> UzsakomosPrekes { get; set; }
-
-        public System.Data.Entity.DbSet<ProjectParduotuve.Models.Worker> Workers { get; set; }
+       
     }
 }

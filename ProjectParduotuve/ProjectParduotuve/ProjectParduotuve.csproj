@@ -223,7 +223,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\BusenaEnumsController.cs" />
     <Compile Include="Controllers\DarbuotojasController.cs" />
     <Compile Include="Controllers\Darbuotojo_menesio_ataskaitaController.cs" />
     <Compile Include="Controllers\KortelesController.cs" />
@@ -233,15 +232,12 @@
     <Compile Include="Controllers\ProduktasController.cs" />
     <Compile Include="Controllers\Produkto_specifikacijaController.cs" />
     <Compile Include="Controllers\Prognazuojama_prekeController.cs" />
-    <Compile Include="Controllers\RightsTypesController.cs" />
     <Compile Include="Controllers\Uzsakomos_prekesController.cs" />
     <Compile Include="Controllers\UzsakymasController.cs" />
     <Compile Include="Controllers\VietasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BusenaEnum.cs" />
-    <Compile Include="Models\Card.cs" />
     <Compile Include="Models\ContosoModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -260,22 +256,18 @@
     <Compile Include="Models\Darbuotojas.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DarbuotojoMenesioAtaskaita.cs" />
     <Compile Include="Models\Darbuotojo_menesio_ataskaita.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Kortele.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\MenesioProognoze.cs" />
     <Compile Include="Models\Menesio_prognoze.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Prisijungimas.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProductSpec.cs" />
     <Compile Include="Models\Produktas.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
@@ -285,15 +277,11 @@
     <Compile Include="Models\Prognazuojama_preke.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ProognozuojamaPreke.cs" />
-    <Compile Include="Models\RightsType.cs" />
     <Compile Include="Models\ssss.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ssss.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\UzsakomosPrekes.cs" />
     <Compile Include="Models\Uzsakomos_prekes.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
@@ -303,11 +291,7 @@
     <Compile Include="Models\Vieta.cs">
       <DependentUpon>ContosoModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Worker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repos\ConnConfig.cs" />
-    <Compile Include="Repos\ProductSpecReposatory.cs" />
-    <Compile Include="Repos\ProductsRepository.cs" />
     <Compile Include="ViewModels\ProductViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -364,41 +348,15 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Card\Details.cshtml" />
-    <Content Include="Views\Card\Delete.cshtml" />
-    <Content Include="Views\Worker\Details.cshtml" />
-    <Content Include="Views\Worker\Index.cshtml" />
-    <Content Include="Views\Worker\Edit.cshtml" />
-    <Content Include="Views\Card\Edit.cshtml" />
-    <Content Include="Views\Card\Index.cshtml" />
-    <Content Include="Views\Worker\Delete.cshtml" />
-    <Content Include="Views\Cashier\Index.cshtml" />
     <Content Include="Views\Korteles\Create.cshtml" />
     <Content Include="Views\Korteles\Delete.cshtml" />
     <Content Include="Views\Korteles\Details.cshtml" />
     <Content Include="Views\Korteles\Edit.cshtml" />
     <Content Include="Views\Korteles\Index.cshtml" />
-    <Content Include="Views\ProductSpecs\Create.cshtml" />
-    <Content Include="Views\ProductSpecs\Delete.cshtml" />
-    <Content Include="Views\ProductSpecs\Details.cshtml" />
-    <Content Include="Views\ProductSpecs\Edit.cshtml" />
-    <Content Include="Views\ProductSpecs\Index.cshtml" />
-    <Content Include="Views\BusenaEnums\Create.cshtml" />
-    <Content Include="Views\BusenaEnums\Delete.cshtml" />
-    <Content Include="Views\BusenaEnums\Details.cshtml" />
-    <Content Include="Views\BusenaEnums\Edit.cshtml" />
-    <Content Include="Views\BusenaEnums\Index.cshtml" />
-    <Content Include="Views\Cards\Create.cshtml" />
-    <Content Include="Views\Cards\Delete.cshtml" />
-    <Content Include="Views\Cards\Details.cshtml" />
-    <Content Include="Views\Cards\Edit.cshtml" />
-    <Content Include="Views\Cards\Index.cshtml" />
     <Content Include="Views\Darbuotojas\Create.cshtml" />
     <Content Include="Views\Darbuotojas\Delete.cshtml" />
     <Content Include="Views\Darbuotojas\Details.cshtml" />
@@ -409,21 +367,11 @@
     <Content Include="Views\Darbuotojo_menesio_ataskaita\Details.cshtml" />
     <Content Include="Views\Darbuotojo_menesio_ataskaita\Edit.cshtml" />
     <Content Include="Views\Darbuotojo_menesio_ataskaita\Index.cshtml" />
-    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Create.cshtml" />
-    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Delete.cshtml" />
-    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Details.cshtml" />
-    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Edit.cshtml" />
-    <Content Include="Views\DarbuotojoMenesioAtaskaitas\Index.cshtml" />
     <Content Include="Views\Menesio_prognoze\Create.cshtml" />
     <Content Include="Views\Menesio_prognoze\Delete.cshtml" />
     <Content Include="Views\Menesio_prognoze\Details.cshtml" />
     <Content Include="Views\Menesio_prognoze\Edit.cshtml" />
     <Content Include="Views\Menesio_prognoze\Index.cshtml" />
-    <Content Include="Views\MenesioProognozes\Create.cshtml" />
-    <Content Include="Views\MenesioProognozes\Delete.cshtml" />
-    <Content Include="Views\MenesioProognozes\Details.cshtml" />
-    <Content Include="Views\MenesioProognozes\Edit.cshtml" />
-    <Content Include="Views\MenesioProognozes\Index.cshtml" />
     <Content Include="Views\Prisijungimas\Create.cshtml" />
     <Content Include="Views\Prisijungimas\Delete.cshtml" />
     <Content Include="Views\Prisijungimas\Details.cshtml" />
@@ -439,26 +387,11 @@
     <Content Include="Views\Produkto_specifikacija\Details.cshtml" />
     <Content Include="Views\Produkto_specifikacija\Edit.cshtml" />
     <Content Include="Views\Produkto_specifikacija\Index.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Create.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Delete.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Details.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Edit.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Index.cshtml" />
-    <Content Include="Views\RightsTypes\Create.cshtml" />
-    <Content Include="Views\RightsTypes\Delete.cshtml" />
-    <Content Include="Views\RightsTypes\Details.cshtml" />
-    <Content Include="Views\RightsTypes\Edit.cshtml" />
-    <Content Include="Views\RightsTypes\Index.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Create.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Delete.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Details.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Edit.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Index.cshtml" />
-    <Content Include="Views\UzsakomosPrekes\Create.cshtml" />
-    <Content Include="Views\UzsakomosPrekes\Delete.cshtml" />
-    <Content Include="Views\UzsakomosPrekes\Details.cshtml" />
-    <Content Include="Views\UzsakomosPrekes\Edit.cshtml" />
-    <Content Include="Views\UzsakomosPrekes\Index.cshtml" />
     <Content Include="Views\Uzsakymas\Create.cshtml" />
     <Content Include="Views\Uzsakymas\Delete.cshtml" />
     <Content Include="Views\Uzsakymas\Details.cshtml" />
@@ -469,11 +402,6 @@
     <Content Include="Views\Vietas\Details.cshtml" />
     <Content Include="Views\Vietas\Edit.cshtml" />
     <Content Include="Views\Vietas\Index.cshtml" />
-    <Content Include="Views\Workers\Create.cshtml" />
-    <Content Include="Views\Workers\Delete.cshtml" />
-    <Content Include="Views\Workers\Details.cshtml" />
-    <Content Include="Views\Workers\Edit.cshtml" />
-    <Content Include="Views\Workers\Index.cshtml" />
     <Content Include="Views\Prognazuojama_preke\Create.cshtml" />
     <Content Include="Views\Prognazuojama_preke\Delete.cshtml" />
     <Content Include="Views\Prognazuojama_preke\Details.cshtml" />
@@ -482,6 +410,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Repos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
