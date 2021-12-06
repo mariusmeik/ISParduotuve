@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ProjectParduotuve.Models.Prognazuojama_preke>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Uzsakymo_kiekis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reikalingas_kiekis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pirkimo_prognoze)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menesio_prognoze.id_Menesio_prognoze)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Produkto_specifikacija.Pavadinimas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uzsakymo_kiekis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reikalingas_kiekis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pirkimo_prognoze)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Menesio_prognoze.id_Menesio_prognoze)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Produkto_specifikacija.Pavadinimas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Prognazuojama_preke }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Prognazuojama_preke }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_Prognazuojama_preke })
+        </td>
+    </tr>
+}
+
+</table>

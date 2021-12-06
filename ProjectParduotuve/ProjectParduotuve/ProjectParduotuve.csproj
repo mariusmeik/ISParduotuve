@@ -224,23 +224,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BusenaEnumsController.cs" />
-    <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Controllers\DarbuotojasController.cs" />
     <Compile Include="Controllers\Darbuotojo_menesio_ataskaitaController.cs" />
     <Compile Include="Controllers\KortelesController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\Menesio_prognozeController.cs" />
     <Compile Include="Controllers\PrisijungimasController.cs" />
-    <Compile Include="Controllers\ProductSpecsController.cs" />
     <Compile Include="Controllers\ProduktasController.cs" />
     <Compile Include="Controllers\Produkto_specifikacijaController.cs" />
-    <Compile Include="Controllers\ProognozuojamaPrekesController.cs" />
+    <Compile Include="Controllers\Prognazuojama_prekeController.cs" />
     <Compile Include="Controllers\RightsTypesController.cs" />
-    <Compile Include="Controllers\UzsakomosPrekesController.cs" />
     <Compile Include="Controllers\Uzsakomos_prekesController.cs" />
     <Compile Include="Controllers\UzsakymasController.cs" />
     <Compile Include="Controllers\VietasController.cs" />
-    <Compile Include="Controllers\WorkersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -374,12 +370,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Product\Edit.cshtml" />
-    <Content Include="Views\Product\index.cshtml" />
-    <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Card\Details.cshtml" />
     <Content Include="Views\Card\Delete.cshtml" />
-    <Content Include="Views\Product\Delete.cshtml" />
     <Content Include="Views\Worker\Details.cshtml" />
     <Content Include="Views\Worker\Index.cshtml" />
     <Content Include="Views\Worker\Edit.cshtml" />
@@ -387,13 +379,6 @@
     <Content Include="Views\Card\Index.cshtml" />
     <Content Include="Views\Worker\Delete.cshtml" />
     <Content Include="Views\Cashier\Index.cshtml" />
-    <Content Include="Views\Product\Create.cshtml" />
-    <Content Include="Views\Product\SpecIndex.cshtml" />
-    <Content Include="Views\Product\Prediction.cshtml" />
-    <Content Include="Views\Product\SpecCreate.cshtml" />
-    <Content Include="Views\Product\SpecDelete.cshtml" />
-    <Content Include="Views\Product\SpecDetails.cshtml" />
-    <Content Include="Views\Product\SpecEdit.cshtml" />
     <Content Include="Views\Korteles\Create.cshtml" />
     <Content Include="Views\Korteles\Delete.cshtml" />
     <Content Include="Views\Korteles\Details.cshtml" />
@@ -444,11 +429,6 @@
     <Content Include="Views\Prisijungimas\Details.cshtml" />
     <Content Include="Views\Prisijungimas\Edit.cshtml" />
     <Content Include="Views\Prisijungimas\Index.cshtml" />
-    <Content Include="Views\Products\Create.cshtml" />
-    <Content Include="Views\Products\Delete.cshtml" />
-    <Content Include="Views\Products\Details.cshtml" />
-    <Content Include="Views\Products\Edit.cshtml" />
-    <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Produktas\Create.cshtml" />
     <Content Include="Views\Produktas\Delete.cshtml" />
     <Content Include="Views\Produktas\Details.cshtml" />
@@ -494,6 +474,11 @@
     <Content Include="Views\Workers\Details.cshtml" />
     <Content Include="Views\Workers\Edit.cshtml" />
     <Content Include="Views\Workers\Index.cshtml" />
+    <Content Include="Views\Prognazuojama_preke\Create.cshtml" />
+    <Content Include="Views\Prognazuojama_preke\Delete.cshtml" />
+    <Content Include="Views\Prognazuojama_preke\Details.cshtml" />
+    <Content Include="Views\Prognazuojama_preke\Edit.cshtml" />
+    <Content Include="Views\Prognazuojama_preke\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
