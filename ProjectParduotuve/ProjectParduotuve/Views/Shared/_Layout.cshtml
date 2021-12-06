@@ -7,6 +7,12 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+        li {
+            float: left;
+            padding: 10px
+        }
+    </style>
 </head>
 <body>
     
@@ -21,14 +27,84 @@
                 @*@Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    @*
-                    <li>@Html.ActionLink("Personal Info", "Index", "Main")</li>
-                    <li>@Html.ActionLink("Products Info", "Index", "Products")</li>
-                    <li>@Html.ActionLink("Cards Info   ", "Index", "Cards")</li>
-                    <li>@Html.ActionLink("Workers Info ", "Index", "Workers")</li>
-                    <li>Model.name</li>
-                    <li>Model.password</li>*@
+                <ul style="display: inline; ">
+                    <li>
+                        @using (Html.BeginForm("Index", "Main", FormMethod.Post))
+                        {
+                            <input class="btn btn-default" type="submit" value="Atgal i pagrindini">
+                        }
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                        {
+                            <input class="btn btn-default" type="submit" value="Back to login">
+                        }
+                    </li>
+                    <li>
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
+                        {
+                            using (Html.BeginForm("Index", "Product", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Products">
+                            }
+                        }
+
+                    </li>
+                    <li>
+                        @if (@Session["rights"] == "Admin")
+                        {
+                            using (Html.BeginForm("Index", "Worker", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Workers">
+                            }
+                        }
+
+                    </li>
+                    <li>
+                        @using (Html.BeginForm("Index", "Card", FormMethod.Post))
+                        {
+                            <input class="btn btn-default" type="submit" value="Cards">
+                        }
+                    </li>
+                    <li>
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Cashier")
+                        {
+                            using (Html.BeginForm("Index", "Cashier", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Cashier">
+                            }
+                        }
+
+                    </li>
+                    <li>
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
+                        {
+                            using (Html.BeginForm("SpecIndex", "Product", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Specification">
+                            }
+                        }
+
+                    </li>
+                    <li>
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
+                        {
+                            using (Html.BeginForm("Prediction", "Product", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Prognoze">
+                            }
+                        }
+
+                    </li>
+                    <li>
+                        <div style="color:white;">
+                            Prisijunges: @Session["user"]
+                        </div>
+                        <div style="color:white;">
+                            Teisės: @Session["rights"]
+                        </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
