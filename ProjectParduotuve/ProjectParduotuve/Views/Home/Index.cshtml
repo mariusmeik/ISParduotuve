@@ -14,7 +14,7 @@
         <input type="password" name="password" id="username-field" class="login-form-field" placeholder="Password">
         <input type="submit" value="Login">
     }
-    @using (Html.BeginForm("Register", "Home", FormMethod.Post))
+    @using (Html.BeginForm("Register", "Home", FormMethod.Get))
     {
         <input type="submit" value="Register">
     }
