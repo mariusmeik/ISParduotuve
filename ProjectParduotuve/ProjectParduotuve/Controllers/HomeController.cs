@@ -45,6 +45,7 @@ namespace ProjectParduotuve.Controllers
             //return View();
         }
 
+        [HttpPost]
         public ActionResult Register(FormCollection fc)
         {
             int seed = DateTime.Now.Year * 100*60*24*365 + DateTime.Now.Day*100*60*24+ DateTime.Now.Minute*100 + DateTime.Now.Millisecond;
@@ -58,8 +59,8 @@ namespace ProjectParduotuve.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Register([Bind(Include = "Vardas,Slaptazodis")] Prisijungimas prisijungimas)
+        
+        public ActionResult Register()
         {
             //return RedirectToAction("Index");
             return View();
