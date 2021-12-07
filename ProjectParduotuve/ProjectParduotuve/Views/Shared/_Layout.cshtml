@@ -53,7 +53,7 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin"|| @Session["rights"] == "Valdytojas")
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Valdytojas")
                         {
                             using (Html.BeginForm("Index", "Darbuotojas", FormMethod.Post))
                             {
@@ -70,7 +70,7 @@
                                 <input class="btn btn-default" type="submit" value="Cards">
                             }
                         }
-                        </li>
+                    </li>
                     <li>
                         @if (@Session["rights"] == "Admin" || @Session["rights"] == "Kasininkas")
                         {
@@ -94,9 +94,19 @@
                     <li>
                         @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
                         {
-                            using (Html.BeginForm("Index", "ProognozuojamaPrekes", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Menesio_prognoze", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Prognoze">
+                            }
+                        }
+
+                    </li>
+                    <li>
+                        @if (@Session["rights"] == "Admin")
+                        {
+                            using (Html.BeginForm("Index", "Prisijungimas", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Prisijungimas">
                             }
                         }
 
