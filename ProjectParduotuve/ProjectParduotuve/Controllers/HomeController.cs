@@ -19,15 +19,20 @@ namespace ProjectParduotuve.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection fc)
         {
-           
+            try
+            {
                 Prisijungimas prisijungimas = db.Prisijungimas.SqlQuery("Select * From Prisijungimas Where Vardas='" + fc["username"] + "' And Slaptazodis='" + fc["password"] + "'").First();
-            if (prisijungimas != null)
+                if (prisijungimas != null)
                 {
                     Session["user"] = prisijungimas.Vardas;
                     Session["password"] = prisijungimas.Slaptazodis;
                     Session["rights"] = prisijungimas.Teises;
                 }
-            
+            }
+            catch
+            {
+
+            }
            
             
             //cheat 
