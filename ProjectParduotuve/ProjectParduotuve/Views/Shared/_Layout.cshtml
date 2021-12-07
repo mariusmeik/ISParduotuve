@@ -40,10 +40,12 @@
                             <input class="btn btn-default" type="submit" value="Back to login">
                         }
                     </li>
+
+
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
                         {
-                            using (Html.BeginForm("Index", "Product", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Produktas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Products">
                             }
@@ -51,9 +53,9 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin")
+                        @if (@Session["rights"] == "Admin"|| @Session["rights"] == "Valdytojas")
                         {
-                            using (Html.BeginForm("Index", "Worker", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Darbuotojas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Workers">
                             }
@@ -61,15 +63,18 @@
 
                     </li>
                     <li>
-                        @using (Html.BeginForm("Index", "Card", FormMethod.Post))
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Klientas")
                         {
-                            <input class="btn btn-default" type="submit" value="Cards">
+                            using (Html.BeginForm("Index", "Korteles", FormMethod.Post))
+                            {
+                                <input class="btn btn-default" type="submit" value="Cards">
+                            }
                         }
-                    </li>
+                        </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Cashier")
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Kasininkas")
                         {
-                            using (Html.BeginForm("Index", "Cashier", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Kasininkas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Cashier">
                             }
@@ -77,9 +82,9 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
                         {
-                            using (Html.BeginForm("SpecIndex", "Product", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Produkto_specifikacija", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Specification">
                             }
@@ -87,9 +92,9 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
+                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
                         {
-                            using (Html.BeginForm("Prediction", "Product", FormMethod.Post))
+                            using (Html.BeginForm("Index", "ProognozuojamaPrekes", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Prognoze">
                             }
