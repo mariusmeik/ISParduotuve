@@ -223,6 +223,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CashierController.cs" />
     <Compile Include="Controllers\DarbuotojasController.cs" />
     <Compile Include="Controllers\Darbuotojo_menesio_ataskaitaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -354,7 +355,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Main\Index.cshtml" />
-    <Content Include="Views\Cashier\Index.cshtml" />
     <Content Include="Views\Korteles\Create.cshtml" />
     <Content Include="Views\Korteles\Delete.cshtml" />
     <Content Include="Views\Korteles\Details.cshtml" />
@@ -395,11 +395,6 @@
     <Content Include="Views\Produkto_specifikacija\Details.cshtml" />
     <Content Include="Views\Produkto_specifikacija\Edit.cshtml" />
     <Content Include="Views\Produkto_specifikacija\Index.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Create.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Delete.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Details.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Edit.cshtml" />
-    <Content Include="Views\ProognozuojamaPrekes\Index.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Create.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Delete.cshtml" />
     <Content Include="Views\Uzsakomos_prekes\Details.cshtml" />
@@ -415,6 +410,8 @@
     <Content Include="Views\Vietas\Details.cshtml" />
     <Content Include="Views\Vietas\Edit.cshtml" />
     <Content Include="Views\Vietas\Index.cshtml" />
+    <Content Include="Views\Cashier\Index.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

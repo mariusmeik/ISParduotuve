@@ -43,7 +43,7 @@
                     <li>
                         @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
                         {
-                            using (Html.BeginForm("Index", "Product", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Productas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Products">
                             }
@@ -53,7 +53,7 @@
                     <li>
                         @if (@Session["rights"] == "Admin")
                         {
-                            using (Html.BeginForm("Index", "Worker", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Darbuotojas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Workers">
                             }
@@ -61,7 +61,7 @@
 
                     </li>
                     <li>
-                        @using (Html.BeginForm("Index", "Card", FormMethod.Post))
+                        @using (Html.BeginForm("Index", "Korteles", FormMethod.Post))
                         {
                             <input class="btn btn-default" type="submit" value="Cards">
                         }
@@ -79,7 +79,7 @@
                     <li>
                         @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
                         {
-                            using (Html.BeginForm("SpecIndex", "Product", FormMethod.Post))
+                            using (Html.BeginForm("SpecIndex", "Productas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Specification">
                             }
@@ -89,7 +89,7 @@
                     <li>
                         @if (@Session["rights"] == "Admin" || @Session["rights"] == "Manager")
                         {
-                            using (Html.BeginForm("Prediction", "Product", FormMethod.Post))
+                            using (Html.BeginForm("Prediction", "Productas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Prognoze">
                             }
