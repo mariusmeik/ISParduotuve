@@ -9,21 +9,15 @@
     @using (Html.BeginForm("Login", "Main", FormMethod.Post))
     {
         <h2>Name</h2>
-        <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-        <h2>Email</h2>
-        <input type="email" name="email" id="username-field" class="login-form-field" placeholder="Email">
-        <h2>Phone</h2>
-        <input type="text" name="phone" id="username-field" class="login-form-field" placeholder="Phone">
-        @if (@Session["rights"] == "Admin")
-        {
-            <h2>Type</h2>
-            <input type="text" name="type" id="username-field" class="login-form-field" placeholder="Type">
-
-        }
+        <input type="text" name="vardas" id="username-field" class="login-form-field" placeholder="vardas">
+        <h2>Right</h2>
+        <input type="text" name="right" id="username-field" class="login-form-field" placeholder="right">
         <h2>Password</h2>
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-        <h2>Password again</h2>
-        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+        <input type="password" name="password" id="password-field" class="login-form-field" placeholder="password">
+        
+
+        @*<h2>Password again</h2>
+            <input type="password" name="password1" id="password-field" class="login-form-field" placeholder="password1">*@
 
         <input type="submit" value="Register">
 

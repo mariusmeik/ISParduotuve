@@ -74,7 +74,7 @@
                     <li>
                         @if (@Session["rights"] == "Admin" || @Session["rights"] == "Kasininkas")
                         {
-                            using (Html.BeginForm("Index", "Kasininkas", FormMethod.Post))
+                            using (Html.BeginForm("Index", "Cashier", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Cashier">
                             }

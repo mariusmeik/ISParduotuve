@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProjectParduotuve.Models;
@@ -21,7 +22,7 @@ namespace ProjectParduotuve.Controllers
         {
             try
             {
-                Prisijungimas prisijungimas = db.Prisijungimas.SqlQuery("Select * From Prisijungimas Where Vardas=" + fc["username"] + ", Slaptazodis=" + fc["password"]).First();
+                Prisijungimas prisijungimas = db.Prisijungimas.SqlQuery("Select * From Prisijungimas Where Vardas='" + fc["username"] + "' And Slaptazodis='" + fc["password"]+"'").First();
                 if (prisijungimas != null)
                 {
                     Session["user"] = prisijungimas.Vardas;
@@ -44,8 +45,16 @@ namespace ProjectParduotuve.Controllers
             //return View();
         }
 
-        public ActionResult Register()
+        public ActionResult Register(FormCollection fc)
         {
+            int seed = DateTime.Now.Year * 100*60*24*365 + DateTime.Now.Day*100*60*24+ DateTime.Now.Minute*100 + DateTime.Now.Millisecond;
+            Random random = new Random(seed);
+            if (fc["vardas"] != "" && fc["password"] != "") {
+                db.Prisijungimas.SqlQuery("INSERT INTO `prisijungimas`(`id_Prisijungimas`,`Vardas`, `Slaptazodis`, `Teises`) VALUES (" + seed + ",'" + fc["vardas"] + "','" + fc["password"] + "','" + fc["right"] + "')");
+                return RedirectToAction("Index");
+            }
+
+
             return View();
         }
 
