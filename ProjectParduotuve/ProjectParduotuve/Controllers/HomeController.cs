@@ -11,7 +11,7 @@ namespace ProjectParduotuve.Controllers
         private ITEntities1 db = new ITEntities1();
         // GET: Product/Edit/5
         //atidarius puslapi
-        [HttpGet]
+        
         public ActionResult Index()
         {
             return View();
@@ -19,26 +19,23 @@ namespace ProjectParduotuve.Controllers
         [HttpPost]
         public ActionResult Index(FormCollection fc)
         {
-            try
-            {
-                Prisijungimas prisijungimas = db.Prisijungimas.SqlQuery("Select * From Prisijungimas Where Vardas=" + fc["username"] + ", Slaptazodis=" + fc["password"]).First();
-                if (prisijungimas != null)
+           
+                Prisijungimas prisijungimas = db.Prisijungimas.SqlQuery("Select * From Prisijungimas Where Vardas='" + fc["username"] + "' And Slaptazodis='" + fc["password"] + "'").First();
+            if (prisijungimas != null)
                 {
                     Session["user"] = prisijungimas.Vardas;
                     Session["password"] = prisijungimas.Slaptazodis;
                     Session["rights"] = prisijungimas.Teises;
                 }
-            }
-            catch {
-
-            }
+            
+           
             
             //cheat 
-            if (true) {
-                Session["user"] = "Admin";
-                Session["password"] = "Admin";
-                Session["rights"] = "Admin";
-            }
+           // if (true) {
+            //    Session["user"] = "Admin";
+           //     Session["password"] = "Admin";
+            //    Session["rights"] = "Admin";
+           // }
 
             return RedirectToAction("index", "Main");
             //return View();
