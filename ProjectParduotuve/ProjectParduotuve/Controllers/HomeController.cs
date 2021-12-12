@@ -51,7 +51,7 @@ namespace ProjectParduotuve.Controllers
             int seed = DateTime.Now.Year * 100*60*24*365 + DateTime.Now.Day*100*60*24+ DateTime.Now.Minute*100 + DateTime.Now.Millisecond;
             Random random = new Random(seed);
             if (fc["vardas"] != "" && fc["password"] != "") {
-                db.Prisijungimas.SqlQuery("INSERT INTO prisijungimas(id_Prisijungimas,Vardas, Slaptazodis, Teises) VALUES (" + seed + ",'" + fc["vardas"] + "','" + fc["password"] + "','" + fc["right"] + "')");
+                db.Prisijungimas.SqlQuery("INSERT INTO `prisijungimas`(`id_Prisijungimas`,`Vardas`, `Slaptazodis`, `Teises`) VALUES (" + seed + ",'" + fc["vardas"] + "','" + fc["password"] + "','" + fc["right"] + "')");
                 return RedirectToAction("Index");
             }
 
