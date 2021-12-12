@@ -35,7 +35,7 @@ namespace ProjectParduotuve.Controllers
             }
             
             //cheat 
-            if (false) {
+            if (true) {
                 Session["user"] = "Admin";
                 Session["password"] = "Admin";
                 Session["rights"] = "Admin";
