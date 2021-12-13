@@ -35,7 +35,7 @@ namespace ProjectParduotuve.Controllers
             }
             
             //cheat 
-            if (false) {
+            if (true) {
                 Session["user"] = "Admin";
                 Session["password"] = "Admin";
                 Session["rights"] = "Admin";
@@ -45,23 +45,30 @@ namespace ProjectParduotuve.Controllers
             //return View();
         }
 
-        public ActionResult Register(FormCollection fc)
+        public ActionResult Register()
         {
-            int seed = DateTime.Now.Year * 100*60*24*365 + DateTime.Now.Day*100*60*24+ DateTime.Now.Minute*100 + DateTime.Now.Millisecond;
-            Random random = new Random(seed);
-            if (fc["vardas"] != "" && fc["password"] != "") {
-                db.Prisijungimas.SqlQuery("INSERT INTO `prisijungimas`(`id_Prisijungimas`,`Vardas`, `Slaptazodis`, `Teises`) VALUES (" + seed + ",'" + fc["vardas"] + "','" + fc["password"] + "','" + fc["right"] + "')");
-                return RedirectToAction("Index");
-            }
-
-
+            
             return View();
         }
 
         [HttpPost]
-        public ActionResult Register([Bind(Include = "Vardas,Slaptazodis")] Prisijungimas prisijungimas)
+        public ActionResult Register(FormCollection fc)
         {
             //return RedirectToAction("Index");
+            int seed = DateTime.Now.Year * 100 * 60 * 24 * 365 + DateTime.Now.Day * 100 * 60 * 24 + DateTime.Now.Minute * 100 + DateTime.Now.Millisecond;
+            Random random = new Random(seed);
+            if (fc["vardas"] != "" && fc["password"] != "")
+            {
+                try
+                {
+                    db.Prisijungimas.SqlQuery("INSERT INTO `prisijungimas`(`id_Prisijungimas`,`Vardas`, `Slaptazodis`, `Teises`) VALUES (" + seed + ",'" + fc["vardas"] + "','" + fc["password"] + "','" + fc["right"] + "')");
+                    return RedirectToAction("Index");
+                }
+                catch{}
+            }
+
+
+
             return View();
         }
 
