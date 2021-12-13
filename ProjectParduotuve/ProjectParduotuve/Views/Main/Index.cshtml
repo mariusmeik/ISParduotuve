@@ -21,22 +21,23 @@
     </dl>
 </div>
 <div>
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-    {
-        <input type="submit" value="Back to login">
-    }
-    @using (Html.BeginForm("Index", "Product", FormMethod.Post))
-    {
-        <input type="submit" value="Products">
-    }
-    @using (Html.BeginForm("Index", "Worker", FormMethod.Post))
-    {
-        <input type="submit" value="Workers">
-    }
-    @using (Html.BeginForm("Index", "Card", FormMethod.Post))
-    {
-        <input type="submit" value="Cards">
-    }
+
+
+        <div style="color:white;">
+            Prisijunges: @Session["user"]
+        </div>
+        <div style="color:white;">
+            Teisės: @Session["rights"]
+        </div>
+ 
+
+
+
+
+
+
+
+
     @if (Session["rights"] == "stuff")
     {
         <div>

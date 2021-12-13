@@ -26,8 +26,8 @@ namespace ProjectParduotuve.Controllers
                 if (prisijungimas != null)
                 {
                     Session["user"] = prisijungimas.Vardas;
-                    Session["password"] = prisijungimas.Slaptazodis;
-                    Session["rights"] = prisijungimas.Teises;
+                    Session["password"] = prisijungimas.Slaptazodis.Trim(' ');
+                    Session["rights"] = prisijungimas.Teises.Trim(' ');
                 }
             }
             catch {
@@ -35,7 +35,7 @@ namespace ProjectParduotuve.Controllers
             }
             
             //cheat 
-            if (true) {
+            if (false) {
                 Session["user"] = "Admin";
                 Session["password"] = "Admin";
                 Session["rights"] = "Admin";

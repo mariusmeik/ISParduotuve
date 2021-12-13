@@ -24,7 +24,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @*@Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                @Html.ActionLink("Login", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul style="display: inline; ">
@@ -34,17 +34,28 @@
                             <input class="btn btn-default" type="submit" value="Atgal i pagrindini">
                         }
                     </li>
-                    <li>
+                    @*<li>
                         @using (Html.BeginForm("Index", "Home", FormMethod.Get))
                         {
                             <input class="btn btn-default" type="submit" value="Back to login">
                         }
-                    </li>
+                    </li>*@
 
 
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
+                        @try
                         {
+                            string tempk = @Session["rights"] as string;
+                        }
+                        catch
+                        {
+                            Session["rights"] = " ";
+                        }
+
+                        @if (Session["rights"] as string == "Admin" || Session["rights"] as string == "Sandelininkas")
+                        {
+
+
                             using (Html.BeginForm("Index", "Produktas", FormMethod.Post))
                             {
                                 <input class="btn btn-default" type="submit" value="Products">
@@ -53,7 +64,7 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Valdytojas")
+                        @if (Session["rights"] as string == "Admin" || Session["rights"] as string == "Valdytojas")
                         {
                             using (Html.BeginForm("Index", "Darbuotojas", FormMethod.Post))
                             {
@@ -63,7 +74,7 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Klientas")
+                        @if (@Session["rights"] as string == "Admin" || @Session["rights"] as string == "Klientas")
                         {
                             using (Html.BeginForm("Index", "Korteles", FormMethod.Post))
                             {
@@ -72,7 +83,7 @@
                         }
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Kasininkas")
+                        @if (@Session["rights"] as string == "Admin" || @Session["rights"] as string == "Kasininkas")
                         {
                             using (Html.BeginForm("Index", "Cashier", FormMethod.Post))
                             {
@@ -82,7 +93,7 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
+                        @if (@Session["rights"] as string == "Admin" || @Session["rights"] as string == "Sandelininkas")
                         {
                             using (Html.BeginForm("Index", "Produkto_specifikacija", FormMethod.Post))
                             {
@@ -92,7 +103,7 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin" || @Session["rights"] == "Sandelininkas")
+                        @if (@Session["rights"] as string == "Admin" || @Session["rights"] as string == "Sandelininkas")
                         {
                             using (Html.BeginForm("Index", "Menesio_prognoze", FormMethod.Post))
                             {
@@ -102,7 +113,7 @@
 
                     </li>
                     <li>
-                        @if (@Session["rights"] == "Admin")
+                        @if (@Session["rights"] as string == "Admin")
                         {
                             using (Html.BeginForm("Index", "Prisijungimas", FormMethod.Post))
                             {
