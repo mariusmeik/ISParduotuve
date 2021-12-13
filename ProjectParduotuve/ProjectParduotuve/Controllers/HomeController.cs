@@ -66,10 +66,8 @@ namespace ProjectParduotuve.Controllers
                 }
                 catch{}
             }
-
-
-
-            return View();
+            
+            return RedirectToAction("Index");
         }
 
 
